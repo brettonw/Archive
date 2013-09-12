@@ -1,0 +1,139 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resources.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include <winnt.h>
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resources.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include <winnt.h>\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+TEXT_WINDOW_MAIN_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "New\a\tCtrl+N",               MENU_FILE_NEW
+        MENUITEM "Open...\a\tCtrl+O",           MENU_FILE_OPEN
+        MENUITEM "Close\a\tCtrl+W",             MENU_FILE_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "Save\a\tCtrl+S",              MENU_FILE_SAVE
+        MENUITEM "Save As...",                  MENU_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Page Setup...",               MENU_FILE_PAGE_SETUP
+        MENUITEM "Print...\a\tCtrl+P",          MENU_FILE_PRINT, GRAYED
+        MENUITEM SEPARATOR
+        POPUP "Recent Files", GRAYED
+        BEGIN
+            MENUITEM "Empty",                       RECENT_FILES_EMPTY
+            , GRAYED
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Exit\a\tCtrl+Q",              MENU_FILE_EXIT
+    END
+    POPUP "Edit"
+    BEGIN
+        MENUITEM "Undo\a\tCtrl+Z",              MENU_EDIT_UNDO, GRAYED
+        MENUITEM "Redo\a\tCtrl+Y",              MENU_EDIT_REDO, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Cut\a\tCtrl+X",               MENU_EDIT_CUT
+        MENUITEM "Copy\a\tCtrl+C",              MENU_EDIT_COPY
+        MENUITEM "Paste\a\tCtrl+V",             MENU_EDIT_PASTE
+        MENUITEM "Clear",                       MENU_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "Find...\a\tCtrl+F",           MENU_EDIT_FIND, GRAYED
+        MENUITEM "Find Again\a\tCtrl+G",        MENU_EDIT_FIND_AGAIN, GRAYED
+        MENUITEM "Replace...\a\tCtrl+H",        MENU_EDIT_REPLACE, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Settings...",                 MENU_EDIT_SETTINGS, GRAYED
+    END
+    MENUITEM "Tools",                       65535, GRAYED
+    POPUP "Language"
+    BEGIN
+        MENUITEM "Plain Text",                  MENU_LANG_ENGLISH
+        MENUITEM "C/C++",                       MENU_LANG_C, CHECKED
+    END
+    MENUITEM "Help",                        65535, GRAYED
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+TEXT_WINDOW_ACCELERATORS ACCELERATORS DISCARDABLE 
+BEGIN
+    "C",            MENU_EDIT_COPY,         VIRTKEY, CONTROL, NOINVERT
+    "F",            MENU_EDIT_FIND,         VIRTKEY, CONTROL, NOINVERT
+    "G",            MENU_EDIT_FIND_AGAIN,   VIRTKEY, CONTROL, NOINVERT
+    "N",            MENU_FILE_NEW,          VIRTKEY, CONTROL, NOINVERT
+    "O",            MENU_FILE_OPEN,         VIRTKEY, CONTROL, NOINVERT
+    "P",            MENU_FILE_PRINT,        VIRTKEY, CONTROL, NOINVERT
+    "Q",            MENU_FILE_EXIT,         VIRTKEY, CONTROL, NOINVERT
+    "S",            MENU_FILE_SAVE,         VIRTKEY, CONTROL, NOINVERT
+    "V",            MENU_EDIT_PASTE,        VIRTKEY, CONTROL, NOINVERT
+    "W",            MENU_FILE_CLOSE,        VIRTKEY, CONTROL, NOINVERT
+    "X",            MENU_EDIT_CUT,          VIRTKEY, CONTROL, NOINVERT
+    "Y",            MENU_EDIT_REDO,         VIRTKEY, CONTROL, NOINVERT
+    "Z",            MENU_EDIT_UNDO,         VIRTKEY, CONTROL, NOINVERT
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

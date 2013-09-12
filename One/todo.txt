@@ -1,0 +1,79 @@
+TO DO
+---------------------------------------------------------------------------------------------------
+-change text rendering to use the scanner to create lists of tokens
+-double click to select words
+-optimize rendering by adding a "text didn't change" flag - allows rendering only this page
+-arrow keys, and delete keys ignore carriage return linefeed combos (treat as one character)
+
+-join test registrar and task registrar to reduce code (add a panic capability)
+
+-undo/redo (command manager)
+-mark changed files with a * in the title bar
+-ask about saving changes when quitting
+
+-update code line formatting (comment lines between functions, etc.)
+
+-my own file object, and streaming operators, to eliminate dependency on C++ rt library and
+ homogenize the file handling codes
+
+-find/replace
+-Select all
+
+-block indent
+-line numbers or goto line
+-protect read only files from editing
+-reload files when changed (on activate)
+
+-private settings files for different projects
+-preferences
+
+-right click brings up a menu
+-info bar with cursor pos
+-auto-completion based on parser information
+-set-as-template new file template that is user selectable as default new format
+
+-single instance of app (launch new files in same app when another instance is launched)
+-html editor
+-makefile editor
+-row window (for project files, and error files)
+-F1 for help (launch MSDN)
+
+-update the bit_or and bit_and keywords
+- vertical line @ 80 chars width to indicate print width
+- navigation history when using find/Ctrl-F3 or other methods to jump around file, a back and forth button, or bookmarking capability
+
+
+BUGS
+---------------------------------------------------------------------------------------------------
+-resizing window not updating scroll bars
+-cpp scanner not properly recognizing preprocessor directives with space on start of line
+-enter on a line that has whitespace in front should only add whitespace up to cursor position
+-vista - application is going into a "not responding" state
+
+
+
+Other notes:
+    + Bug fixes (scrolling problems)
+    + Save as Windows/Unix type, make the thing play well with notepad
+    + Font size menu
+    + window size option (number of lines to display at start)
+    + Preferences file for window size, tabs, font sizes, and colors (make it look in the current directory and seek up from there)
+    + Perforce integration
+    + Subversion integration (nothing to do?)
+    + Java language
+    + Spellchecker
+    + Do/Undo
+    + Optimization
+    + Double-click to select words
+    + Line numbers
+    + Better text class
+    + Outline/To-do handling
+    + Print
+    + Word Wrap (fixed size or window size)
+    + XML language
+    + Scroll wheel support
+    + confirm save when closing modified files
+    + a flag somewhere indicating file is not saved
+    + find running instances and use them to open a new window
+    + default save as extension to ".txt"
+    + SQL language support

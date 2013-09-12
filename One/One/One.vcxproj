@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E0EBB4E9-C659-416D-AA32-4954F526EF4D}</ProjectGuid>
+    <RootNamespace>One</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.51106.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)_build\$(Configuration)\</OutDir>
+    <IntDir>$(TargetDir)obj\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)_build\$(Configuration)\</OutDir>
+    <IntDir>$(TargetDir)obj\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompile.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)One.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)One.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompile.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)One.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="application.cpp" />
+    <ClCompile Include="application_body.cpp" />
+    <ClCompile Include="bits.cpp" />
+    <ClCompile Include="cerr.cpp" />
+    <ClCompile Include="cmd_line_scanner.cpp" />
+    <ClCompile Include="cmd_line_scanner_action.cpp" />
+    <ClCompile Include="command.cpp" />
+    <ClCompile Include="counted_object.cpp" />
+    <ClCompile Include="cpp_scanner.cpp" />
+    <ClCompile Include="cpp_scanner_action.cpp" />
+    <ClCompile Include="cpp_window.cpp" />
+    <ClCompile Include="directory.cpp" />
+    <ClCompile Include="display_tokenizer.cpp" />
+    <ClCompile Include="error_handler.cpp" />
+    <ClCompile Include="error_node.cpp" />
+    <ClCompile Include="graph_of.cpp" />
+    <ClCompile Include="handle.cpp" />
+    <ClCompile Include="handle_to.cpp" />
+    <ClCompile Include="hash_table_of.cpp" />
+    <ClCompile Include="hierarchical_command.cpp" />
+    <ClCompile Include="list_of.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="One.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="priority_queue_of.cpp" />
+    <ClCompile Include="ptr_to.cpp" />
+    <ClCompile Include="raw_text.cpp" />
+    <ClCompile Include="registry.cpp" />
+    <ClCompile Include="resetter_of.cpp" />
+    <ClCompile Include="resizable_vector_of.cpp" />
+    <ClCompile Include="scanner.cpp" />
+    <ClCompile Include="scanner_action.cpp" />
+    <ClCompile Include="scanner_state.cpp" />
+    <ClCompile Include="scanner_state_info.cpp" />
+    <ClCompile Include="scrolling_window.cpp" />
+    <ClCompile Include="sentinel_node.cpp" />
+    <ClCompile Include="stack_of.cpp" />
+    <ClCompile Include="task.cpp" />
+    <ClCompile Include="task_registrar.cpp" />
+    <ClCompile Include="test.cpp" />
+    <ClCompile Include="test_registrar.cpp" />
+    <ClCompile Include="test_reporter.cpp" />
+    <ClCompile Include="text.cpp" />
+    <ClCompile Include="text_scanner.cpp" />
+    <ClCompile Include="text_scanner_action.cpp" />
+    <ClCompile Include="text_scanner_drawing_action.cpp" />
+    <ClCompile Include="text_window.cpp" />
+    <ClCompile Include="token.cpp" />
+    <ClCompile Include="tokenizer.cpp" />
+    <ClCompile Include="window.cpp" />
+    <ClCompile Include="windows_utility.cpp" />
+    <ClCompile Include="winmain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="application.h" />
+    <ClInclude Include="application_body.h" />
+    <ClInclude Include="assert.h" />
+    <ClInclude Include="bits.h" />
+    <ClInclude Include="client_for_list_of.h" />
+    <ClInclude Include="cmd_line_scanner.h" />
+    <ClInclude Include="cmd_line_scanner_action.h" />
+    <ClInclude Include="command.h" />
+    <ClInclude Include="counted_object.h" />
+    <ClInclude Include="cpp_scanner.h" />
+    <ClInclude Include="cpp_scanner_action.h" />
+    <ClInclude Include="cpp_window.h" />
+    <ClInclude Include="directory.h" />
+    <ClInclude Include="display_tokenizer.h" />
+    <ClInclude Include="error_handler.h" />
+    <ClInclude Include="error_node.h" />
+    <ClInclude Include="exception.h" />
+    <ClInclude Include="graph_node_of.h" />
+    <ClInclude Include="graph_of.h" />
+    <ClInclude Include="handle.h" />
+    <ClInclude Include="handle_to.h" />
+    <ClInclude Include="hash.h" />
+    <ClInclude Include="hash_table_node_of.h" />
+    <ClInclude Include="hash_table_of.h" />
+    <ClInclude Include="hierarchical_command.h" />
+    <ClInclude Include="iterator_on_graph_of.h" />
+    <ClInclude Include="iterator_on_hash_table_of.h" />
+    <ClInclude Include="iterator_on_list_of.h" />
+    <ClInclude Include="line_state.h" />
+    <ClInclude Include="list_node_of.h" />
+    <ClInclude Include="list_of.h" />
+    <ClInclude Include="precompile.h" />
+    <ClInclude Include="priority_queue_of.h" />
+    <ClInclude Include="ptr_to.h" />
+    <ClInclude Include="raw_text.h" />
+    <ClInclude Include="registry.h" />
+    <ClInclude Include="resetter_of.h" />
+    <ClInclude Include="resizable_vector_of.h" />
+    <ClInclude Include="resources.h" />
+    <ClInclude Include="scanner.h" />
+    <ClInclude Include="scanner_action.h" />
+    <ClInclude Include="scanner_state.h" />
+    <ClInclude Include="scanner_state_info.h" />
+    <ClInclude Include="screen_partition.h" />
+    <ClInclude Include="scrolling_window.h" />
+    <ClInclude Include="sentinel_node.h" />
+    <ClInclude Include="stack_of.h" />
+    <ClInclude Include="task.h" />
+    <ClInclude Include="task_registrar.h" />
+    <ClInclude Include="test.h" />
+    <ClInclude Include="test_registrar.h" />
+    <ClInclude Include="test_reporter.h" />
+    <ClInclude Include="text.h" />
+    <ClInclude Include="text_scanner.h" />
+    <ClInclude Include="text_scanner_action.h" />
+    <ClInclude Include="text_scanner_drawing_action.h" />
+    <ClInclude Include="text_window.h" />
+    <ClInclude Include="token.h" />
+    <ClInclude Include="token_window.h" />
+    <ClInclude Include="tokenizer.h" />
+    <ClInclude Include="type_defines.h" />
+    <ClInclude Include="window.h" />
+    <ClInclude Include="windows_utility.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="One.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\todo.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

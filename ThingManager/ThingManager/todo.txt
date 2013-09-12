@@ -1,0 +1,21 @@
+- if I wanted to know all of the objects any particular thing is colliding with, I could
+  consider installing two copies of each mash, mirror images of each other. This would 
+  make removal easier, too, but at the cost of extra add and remove calls, and double 
+  storage in the open list
+- abstract the binary search for sorted arrays (find, add, remove), as this is basically 
+  implemented  twice for two slightly different array types
+- velocity in things, with bounds
+- remove things from collider (binary search, etc) needs to be better in the open list removal
+- generate events from collisions for something other than the solver to handle - general 
+  philosophy should be a collider to detect potential collisions, a solver/separator to 
+  move things apart, and an integrator to implement physics
+- re-enable lines and boxes
+- how about a thing iterator, begin and end... (it should probably be on the list node base class)
+
+
+        // some queries to execute on this structure
+        // findthing (point)
+        // findnearestthing (point)
+        // traceray (ray)
+        // getintersection (rect or shape)
+        // getcontained (rect or shape)

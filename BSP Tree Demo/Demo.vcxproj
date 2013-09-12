@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{EC10EAB1-9841-40E9-A717-82751B7888E2}</ProjectGuid>
+    <RootNamespace>Demo</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.51106.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/Demo.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeaderOutputFile>.\Release/Demo.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;ddraw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>BSP Tree Demo.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ProgramDatabaseFile>.\Release/BSP Tree Demo.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release/Demo.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/Demo.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>C:\Program Files\Microsoft DirectX SDK (December 2005)\Include;.\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>.\Debug/Demo.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;ddraw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\Debug/Demo.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>C:\Program Files\Microsoft DirectX SDK (December 2005)\Lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Debug/Demo.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug/Demo.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="source\arcball.cpp" />
+    <ClCompile Include="source\bound_3d.cpp" />
+    <ClCompile Include="source\bspnode_3d.cpp" />
+    <ClCompile Include="source\bsptree_3d.cpp" />
+    <ClCompile Include="source\camera_3d.cpp" />
+    <ClCompile Include="source\cube.cpp" />
+    <ClCompile Include="source\draw.cpp" />
+    <ClCompile Include="source\initapp.cpp" />
+    <ClCompile Include="source\iterator_3d.cpp" />
+    <ClCompile Include="source\listptr_3d.cpp" />
+    <ClCompile Include="source\matrix_3d.cpp" />
+    <ClCompile Include="source\object_3d.cpp" />
+    <ClCompile Include="source\plane_3d.cpp" />
+    <ClCompile Include="source\point_2d.cpp" />
+    <ClCompile Include="source\point_3d.cpp" />
+    <ClCompile Include="source\polygon_3d.cpp" />
+    <ClCompile Include="source\polylist_3d.cpp" />
+    <ClCompile Include="source\polyptr_3d.cpp" />
+    <ClCompile Include="source\quaternion_3d.cpp" />
+    <ClCompile Include="source\ray_3d.cpp" />
+    <ClCompile Include="source\rcpolygon_3d.cpp" />
+    <ClCompile Include="source\split.cpp" />
+    <ClCompile Include="source\transform_3d.cpp" />
+    <ClCompile Include="source\tuple_2d.cpp" />
+    <ClCompile Include="source\tuple_3d.cpp" />
+    <ClCompile Include="source\vector_2d.cpp" />
+    <ClCompile Include="source\vector_3d.cpp" />
+    <ClCompile Include="source\view.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="INCLUDE\ARCBALL.H" />
+    <ClInclude Include="INCLUDE\BOUND_3D.H" />
+    <ClInclude Include="INCLUDE\bspnode_3d.h" />
+    <ClInclude Include="INCLUDE\bsptree_3d.h" />
+    <ClInclude Include="INCLUDE\camera_3d.h" />
+    <ClInclude Include="INCLUDE\COORD.H" />
+    <ClInclude Include="INCLUDE\CUBE.H" />
+    <ClInclude Include="INCLUDE\DRAW.H" />
+    <ClInclude Include="INCLUDE\iterator_3d.h" />
+    <ClInclude Include="INCLUDE\listptr_3d.h" />
+    <ClInclude Include="INCLUDE\matrix_3d.h" />
+    <ClInclude Include="INCLUDE\object_3d.h" />
+    <ClInclude Include="INCLUDE\PI.H" />
+    <ClInclude Include="INCLUDE\PLANE_3D.H" />
+    <ClInclude Include="INCLUDE\POINT_2D.H" />
+    <ClInclude Include="INCLUDE\POINT_3D.H" />
+    <ClInclude Include="INCLUDE\polygon_3d.h" />
+    <ClInclude Include="INCLUDE\polylist_3d.h" />
+    <ClInclude Include="INCLUDE\polyptr_3d.h" />
+    <ClInclude Include="INCLUDE\precompile.h" />
+    <ClInclude Include="INCLUDE\quaternion_3d.h" />
+    <ClInclude Include="INCLUDE\RAY_3D.H" />
+    <ClInclude Include="INCLUDE\rcpolygon_3d.h" />
+    <ClInclude Include="INCLUDE\SPLIT.H" />
+    <ClInclude Include="INCLUDE\transform_3d.h" />
+    <ClInclude Include="INCLUDE\TUPLE_2D.H" />
+    <ClInclude Include="INCLUDE\TUPLE_3D.H" />
+    <ClInclude Include="INCLUDE\UTILITY.H" />
+    <ClInclude Include="INCLUDE\vector_2d.h" />
+    <ClInclude Include="INCLUDE\vector_3d.h" />
+    <ClInclude Include="INCLUDE\view.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
