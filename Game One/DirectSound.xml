@@ -1,0 +1,7 @@
+<xml>
+    <Sound name="beep1"         filename="beep1.wav"/>
+    <Sound name="beep2"         filename="beep2.wav"/>
+    <Sound name="beep3"         filename="beep3.wav"/>
+    <Sound name="transmission"  filename="transmission.wav"/>
+    <Sound name="impact"        filename="impact.wav"/>
+</xml>

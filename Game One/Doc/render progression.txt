@@ -1,0 +1,3 @@
+Render Object contains rendering parameters like the render target, etc.
+Render object refers to a light object
+Light object sets parameters on the effect, but effects are set in the renderstate node so the light object must be propagated through the render calls

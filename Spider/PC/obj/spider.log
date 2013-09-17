@@ -1,0 +1,23 @@
+﻿Build started 9/17/2013 5:55:54 PM.
+     1>Project "C:\Programs\apache-tomcat-7.0.21-owf7\webapps\bwade\Bedrock\Spider\PC\spider.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I..\Common\ /I..\PC\ /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /GF /Gm /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR- /Yc"precompile.h" /Fp"obj\spider.pch" /Fo"obj\\" /Fd"obj\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ..\Common\precompile.cpp
+         precompile.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I..\Common\ /I..\PC\ /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /GF /Gm /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR- /Yu"precompile.h" /Fp"obj\spider.pch" /Fo"obj\\" /Fd"obj\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt application.cpp ..\Common\compilation.cpp
+         compilation.cpp
+         application.cpp
+         Generating Code...
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.0\bin\x86\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /I..\Art\ /I..\Sound\ /nologo /fo"obj\spider.res" spider.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Programs\apache-tomcat-7.0.21-owf7\webapps\bwade\Bedrock\Spider\_Build\PC\Debug\spider.exe" /INCREMENTAL /NOLOGO Winmm.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST:NO /DEBUG /PDB:"C:\Programs\apache-tomcat-7.0.21-owf7\webapps\bwade\Bedrock\Spider\_Build\PC\Debug\spider.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Programs\apache-tomcat-7.0.21-owf7\webapps\bwade\Bedrock\Spider\_Build\PC\Debug\spider.lib" /MACHINE:X86 /SAFESEH obj\spider.res
+         obj\application.obj
+         obj\compilation.obj
+         obj\precompile.obj
+     1>application.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+         spider.vcxproj -> C:\Programs\apache-tomcat-7.0.21-owf7\webapps\bwade\Bedrock\Spider\_Build\PC\Debug\spider.exe
+     1>Done Building Project "C:\Programs\apache-tomcat-7.0.21-owf7\webapps\bwade\Bedrock\Spider\PC\spider.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.35

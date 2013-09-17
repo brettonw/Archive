@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>GameOne</ProjectName>
+    <ProjectGuid>{FD6C4B91-CFCD-4288-BA0E-B147B533B053}</ProjectGuid>
+    <RootNamespace>GameOne</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.51106.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>Debug\</OutDir>
+    <IntDir>Debug\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/GameOne.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>code\Shared;code\XML;code\Game;code\Scene;code\Player;code\DirectX;code\Geometry;code\Render;code\Screens;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <PrecompiledHeader />
+      <PrecompiledHeaderOutputFile>.\Release/GameOne.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>d3d9.lib;d3dx9.lib;dsound.lib;dxerr9.lib;dxguid.lib;xinput.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\Release/GameOne.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ProgramDatabaseFile>.\Release/GameOne.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>false</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/GameOne.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>code\Shared;code\XML;code\Game;code\Scene;code\Player;code\DirectX;code\Geometry;code\Render;code\Screens;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompile.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Debug\GameOne.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;d3d9.lib;d3dx9.lib;dsound.lib;dxerr.lib;dxguid.lib;xinput.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\Debug/GameOne.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <IgnoreSpecificDefaultLibraries>libci.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Debug/GameOne.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Code\DirectX\direct_3d.cpp" />
+    <ClCompile Include="Code\DirectX\direct_music.cpp" />
+    <ClCompile Include="Code\DirectX\dx_debug.cpp" />
+    <ClCompile Include="Code\DirectX\effect.cpp" />
+    <ClCompile Include="Code\Game\camera.cpp" />
+    <ClCompile Include="Code\Game\COM.cpp" />
+    <ClCompile Include="Code\Game\game.cpp" />
+    <ClCompile Include="Code\Game\game_object.cpp" />
+    <ClCompile Include="Code\Game\main.cpp" />
+    <ClCompile Include="Code\Game\physics_body.cpp" />
+    <ClCompile Include="Code\Game\timer.cpp" />
+    <ClCompile Include="Code\Game\window.cpp" />
+    <ClCompile Include="Code\Geometry\geometry_cube.cpp" />
+    <ClCompile Include="Code\Geometry\geometry_cylinder.cpp" />
+    <ClCompile Include="Code\Geometry\geometry_object.cpp" />
+    <ClCompile Include="Code\Geometry\geometry_object_indexed.cpp" />
+    <ClCompile Include="Code\Geometry\geometry_shadow.cpp" />
+    <ClCompile Include="Code\Geometry\vertex.cpp" />
+    <ClCompile Include="Code\Geometry\vertex_shadow.cpp" />
+    <ClCompile Include="Code\Player\player_human.cpp" />
+    <ClCompile Include="Code\Player\player_object.cpp" />
+    <ClCompile Include="Code\Player\player_robot.cpp" />
+    <ClCompile Include="Code\Scene\drawn_object.cpp" />
+    <ClCompile Include="Code\Scene\render_state.cpp" />
+    <ClCompile Include="Code\Scene\scene_graph_node.cpp" />
+    <ClCompile Include="Code\Scene\scene_object.cpp" />
+    <ClCompile Include="Code\Scene\transform_xml.cpp" />
+    <ClCompile Include="Code\Shared\advanced_math.cpp" />
+    <ClCompile Include="Code\Shared\bits.cpp" />
+    <ClCompile Include="Code\Shared\counted_object.cpp" />
+    <ClCompile Include="Code\Shared\debug.cpp" />
+    <ClCompile Include="Code\Shared\precompile.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Code\Shared\raw_text.cpp" />
+    <ClCompile Include="Code\Shared\task.cpp" />
+    <ClCompile Include="Code\Shared\task_registrar.cpp" />
+    <ClCompile Include="Code\Shared\text.cpp" />
+    <ClCompile Include="Code\Xml\scanner.cpp" />
+    <ClCompile Include="Code\Xml\scanner_action.cpp" />
+    <ClCompile Include="Code\Xml\scanner_state.cpp" />
+    <ClCompile Include="Code\Xml\tokenizer.cpp" />
+    <ClCompile Include="Code\Xml\xml_node.cpp" />
+    <ClCompile Include="Code\Xml\xml_scanner.cpp" />
+    <ClCompile Include="Code\Render\light_object.cpp" />
+    <ClCompile Include="Code\Render\render_object.cpp" />
+    <ClCompile Include="Code\Screens\scene_screen.cpp" />
+    <ClCompile Include="Code\Screens\screen.cpp" />
+    <ClCompile Include="Code\Screens\screen_manager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Code\DirectX\direct_3d.h" />
+    <ClInclude Include="Code\DirectX\direct_music.h" />
+    <ClInclude Include="Code\DirectX\dx_debug.h" />
+    <ClInclude Include="Code\DirectX\dx_wrapper.h" />
+    <ClInclude Include="Code\DirectX\effect.h" />
+    <ClInclude Include="Code\Game\camera.h" />
+    <ClInclude Include="Code\Game\game.h" />
+    <ClInclude Include="Code\Game\game_object.h" />
+    <ClInclude Include="Code\Game\light.h" />
+    <ClInclude Include="Code\Game\physics_body.h" />
+    <ClInclude Include="Code\Game\timer.h" />
+    <ClInclude Include="Code\Game\window.h" />
+    <ClInclude Include="Code\Geometry\geometry_cube.h" />
+    <ClInclude Include="Code\Geometry\geometry_cylinder.h" />
+    <ClInclude Include="Code\Geometry\geometry_object.h" />
+    <ClInclude Include="Code\Geometry\geometry_object_indexed.h" />
+    <ClInclude Include="Code\Geometry\geometry_shadow.h" />
+    <ClInclude Include="Code\Geometry\vertex.h" />
+    <ClInclude Include="Code\Geometry\vertex_shadow.h" />
+    <ClInclude Include="Code\Player\player_human.h" />
+    <ClInclude Include="Code\Player\player_object.h" />
+    <ClInclude Include="Code\Player\player_robot.h" />
+    <ClInclude Include="Code\Scene\drawn_object.h" />
+    <ClInclude Include="Code\Scene\render_pass.h" />
+    <ClInclude Include="Code\Scene\render_state.h" />
+    <ClInclude Include="Code\Scene\scene_graph_node.h" />
+    <ClInclude Include="Code\Scene\scene_object.h" />
+    <ClInclude Include="Code\Scene\transform_xml.h" />
+    <ClInclude Include="Code\Shared\advanced_math.h" />
+    <ClInclude Include="Code\Shared\assert.h" />
+    <ClInclude Include="Code\Shared\bits.h" />
+    <ClInclude Include="Code\Shared\counted_object.h" />
+    <ClInclude Include="Code\Shared\debug.h" />
+    <ClInclude Include="Code\Shared\definitions.h" />
+    <ClInclude Include="Code\Shared\dependency_graph.h" />
+    <ClInclude Include="Code\Shared\force_load.h" />
+    <ClInclude Include="Code\Shared\free_list.h" />
+    <ClInclude Include="Code\Shared\indexed_object.h" />
+    <ClInclude Include="Code\Shared\precompile.h" />
+    <ClInclude Include="Code\Shared\ptr_to.h" />
+    <ClInclude Include="Code\Shared\raw_text.h" />
+    <ClInclude Include="Code\Shared\resetter.h" />
+    <ClInclude Include="Code\Shared\singleton.h" />
+    <ClInclude Include="Code\Shared\std_allocator.h" />
+    <ClInclude Include="Code\Shared\task.h" />
+    <ClInclude Include="Code\Shared\task_registrar.h" />
+    <ClInclude Include="Code\Shared\text.h" />
+    <ClInclude Include="Code\Shared\text_map.h" />
+    <ClInclude Include="Code\Xml\scanner.h" />
+    <ClInclude Include="Code\Xml\scanner_action.h" />
+    <ClInclude Include="Code\Xml\scanner_state.h" />
+    <ClInclude Include="Code\Xml\scanner_state_info.h" />
+    <ClInclude Include="Code\Xml\token.h" />
+    <ClInclude Include="Code\Xml\tokenizer.h" />
+    <ClInclude Include="Code\Xml\xml_node.h" />
+    <ClInclude Include="Code\Xml\xml_scanner.h" />
+    <ClInclude Include="Code\Render\light_object.h" />
+    <ClInclude Include="Code\Render\render_object.h" />
+    <ClInclude Include="Code\Screens\scene_screen.h" />
+    <ClInclude Include="Code\Screens\screen.h" />
+    <ClInclude Include="Code\Screens\screen_manager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Code\Shared\advanced_math.inl" />
+    <None Include="Code\Shared\counted_object.inl" />
+    <None Include="Code\Shared\dependency_graph.inl" />
+    <None Include="Code\Shared\indexed_object.inl" />
+    <None Include="Code\Shared\ptr_to.inl" />
+    <None Include="Code\Shared\resetter.inl" />
+    <None Include="Code\Shared\singleton.inl" />
+    <None Include="Code\Shared\task.inl" />
+    <None Include="Code\Shared\text.inl" />
+    <None Include="Code\Xml\scanner_state.inl" />
+    <None Include="Code\Xml\scanner_state_info.inl" />
+    <None Include="Code\Xml\token.inl" />
+    <None Include="Code\Xml\xml_node.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Effect\BasicEffect.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+    </FxCompile>
+    <FxCompile Include="Effect\ShaderEffect.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="config.xml" />
+    <Xml Include="Direct3D.xml" />
+    <Xml Include="DirectSound.xml" />
+    <Xml Include="Scene.xml" />
+    <Xml Include="Screens.xml" />
+    <Xml Include="Window.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ToDo.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

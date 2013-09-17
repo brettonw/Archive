@@ -1,0 +1,30 @@
+- installer?
+- "you win!" message
+- Drag placement should look like at where the card is appearing on screen, not just the mouse position, and snap to a proposed position
+- save/load game (history?)
+- Better memory arrangement for undo data
+- stats? saved in the registry?
+- bigger version for desktop systems
+- undo needs to be more accessible
+- Stack drawing needs to account for screen height and adjust if stack would be off screen
+- picking up the card should account for the pointer position to avoid a snap
+- ghost cheat for cards under one faceup stack that could be easily seen if there is an empty stack to use as a testing ground
+
+- Spider
+    + Finish the game and figure out how to package it for sale
+    + Need a reward for good events, like win, or completion of a run
+    + Add a scoring mechanism
+    + replaceableBackground image
+    + options to enable/disable background image, card face image option
+    + use the theme colors for the background if image is turned off
+    + test it on multiple handhelds
+    + Expand the PC version a bit
+    + Suggest a move... (auto-play)
+    + strict rules mode
+    + sounds need to be refined
+    + menu option to turn sound on or off
+    + deal animation?
+    + a helpscreen with instructions
+    + options dialog
+    + better icons
+    + EULA

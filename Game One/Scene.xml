@@ -1,0 +1,165 @@
+<xml>
+    <Effect name="BasicEffect" filename="BasicEffect.fx"/>
+    <Effect name="ShaderEffect" filename="ShaderEffect.fx"/>
+    
+    <GeometryObject name="ShadowCylinder64" type="Shadow">
+        <GeometryObject name="Cylinder64" type="Cylinder" tessellation="64"/>
+    </GeometryObject>
+    <GeometryObject name="ShadowCylinder32" type="Shadow">
+        <GeometryObject name="Cylinder32" type="Cylinder" tessellation="32"/>
+    </GeometryObject>
+    <GeometryObject name="ShadowCylinder16" type="Shadow">
+        <GeometryObject name="Cylinder16" type="Cylinder" tessellation="16"/>
+    </GeometryObject>
+    <GeometryObject name="ShadowCylinder8" type="Shadow">
+        <GeometryObject name="Cylinder8" type="Cylinder" tessellation="8"/>
+    </GeometryObject>
+    <GeometryObject name="ShadowCube" type="Shadow">
+        <GeometryObject name="Cube" type="Cube"/>
+    </GeometryObject>
+
+    <SceneObject name="root" type="SceneGraphNode">
+        <SceneObject name="floor texture" type="RenderState" effect="ShaderEffect" rgb="(0.9, 1.0, 0.9)">
+            <SceneObject name="arena" type="DrawnObject" geometry="Cylinder64">
+                <Transform type="scale">(50.00, 1.0, 50.00)</Transform>
+                <Transform type="translation">(0.00, -1.50, 0.00)</Transform>
+            </SceneObject>
+        </SceneObject>
+        <SceneObject name="wall texture" type="RenderState" texture="wall.dds" effect="BasicEffect" rgb="(1.0, 0.9, 1.0)">
+            <SceneObject name="building 1" type="SceneGraphNode">
+                <SceneObject name="building 1 structure" type="DrawnObject" geometry="ShadowCylinder32">
+                    <Transform type="scale">(3.00, 1.00, 3.00)</Transform>
+                </SceneObject>
+            </SceneObject>
+            <SceneObject name="building 2" type="SceneGraphNode">
+                <SceneObject name="building 2 structure" type="DrawnObject" geometry="ShadowCylinder32">
+                    <Transform type="scale">(3.00, 1.00, 3.00)</Transform>
+                </SceneObject>
+            </SceneObject>
+            <SceneObject name="building 3" type="SceneGraphNode">
+                <SceneObject name="building 3 structure" type="DrawnObject" geometry="ShadowCylinder32">
+                    <Transform type="scale">(3.00, 1.00, 3.00)</Transform>
+                </SceneObject>
+            </SceneObject>
+            <SceneObject name="building 4" type="SceneGraphNode">
+                <SceneObject name="building 4 structure" type="DrawnObject" geometry="ShadowCylinder32">
+                    <Transform type="scale">(3.00, 1.00, 3.00)</Transform>
+                </SceneObject>
+            </SceneObject>
+        </SceneObject>
+        <SceneObject name="tank texture" type="RenderState" texture="tank.dds" effect="BasicEffect" rgb="(1.0, 1.0, 1.0)">
+            <SceneObject name="tank" type="SceneGraphNode">
+                <SceneObject name="tank body" type="DrawnObject" geometry="ShadowCylinder64">
+                    <Transform type="scale">(1.00, 0.25, 1.00)</Transform>
+                </SceneObject>
+                <SceneObject name="turret" type="SceneGraphNode">
+                    <SceneObject name="gun barrell" type="DrawnObject" geometry="ShadowCylinder8">
+                        <Transform type="scale">(0.05, 0.50, 0.05)</Transform>
+                        <Transform type="rotation">(0.00, 0.00, 1.00) 90.0</Transform>
+                        <Transform type="translation">(0.50, 0.45, 0.00)</Transform>
+                    </SceneObject>
+                    <SceneObject name="turret body" type="DrawnObject" geometry="ShadowCylinder32">
+                        <Transform type="scale">(0.40, 0.20, 0.40)</Transform>
+                        <Transform type="translation">(0.00, 0.45, 0.00)</Transform>
+                    </SceneObject>
+                </SceneObject>
+            </SceneObject>
+            <SceneObject name="tank 2" type="SceneGraphNode">
+                <SceneObject name="tank body 2" type="DrawnObject" geometry="ShadowCylinder64">
+                    <Transform type="scale">(1.00, 0.25, 1.00)</Transform>
+                </SceneObject>
+                <SceneObject name="turret 2" type="SceneGraphNode">
+                    <SceneObject name="gun barrell 2" type="DrawnObject" geometry="ShadowCylinder8">
+                        <Transform type="scale">(0.05, 0.50, 0.05)</Transform>
+                        <Transform type="rotation">(0.00, 0.00, 1.00) 90.0</Transform>
+                        <Transform type="translation">(0.50, 0.45, 0.00)</Transform>
+                    </SceneObject>
+                    <SceneObject name="turret body 2" type="DrawnObject" geometry="ShadowCube">
+                        <Transform type="scale">(0.40, 0.20, 0.40)</Transform>
+                        <Transform type="translation">(0.00, 0.45, 0.00)</Transform>
+                    </SceneObject>
+                </SceneObject>
+            </SceneObject>
+            <SceneObject name="tank 3" type="SceneGraphNode">
+                <SceneObject name="tank body 3" type="DrawnObject" geometry="ShadowCylinder64">
+                    <Transform type="scale">(1.00, 0.25, 1.00)</Transform>
+                </SceneObject>
+                <SceneObject name="turret 3" type="SceneGraphNode">
+                    <SceneObject name="gun barrell 3" type="DrawnObject" geometry="ShadowCylinder8">
+                        <Shadow length="6"/>
+                        <Transform type="scale">(0.05, 0.50, 0.05)</Transform>
+                        <Transform type="rotation">(0.00, 0.00, 1.00) 90.0</Transform>
+                        <Transform type="translation">(0.50, 0.45, 0.00)</Transform>
+                    </SceneObject>
+                    <SceneObject name="turret body 3" type="DrawnObject" geometry="ShadowCube">
+                        <Transform type="scale">(0.40, 0.20, 0.40)</Transform>
+                        <Transform type="translation">(0.00, 0.45, 0.00)</Transform>
+                    </SceneObject>
+                </SceneObject>
+            </SceneObject>
+
+            <SceneObject name="tank 4" type="SceneGraphNode">
+                <SceneObject name="tank body 4" type="DrawnObject" geometry="ShadowCylinder64">
+                    <Transform type="scale">(1.00, 0.25, 1.00)</Transform>
+                </SceneObject>
+                <SceneObject name="turret 4" type="SceneGraphNode">
+                    <SceneObject name="gun barrell 4" type="DrawnObject" geometry="ShadowCylinder8">
+                        <Transform type="scale">(0.05, 0.50, 0.05)</Transform>
+                        <Transform type="rotation">(0.00, 0.00, 1.00) 90.0</Transform>
+                        <Transform type="translation">(0.50, 0.45, 0.00)</Transform>
+                    </SceneObject>
+                    <SceneObject name="turret body 4" type="DrawnObject" geometry="ShadowCube">
+                        <Transform type="scale">(0.40, 0.20, 0.40)</Transform>
+                        <Transform type="translation">(0.00, 0.45, 0.00)</Transform>
+                    </SceneObject>
+                </SceneObject>
+            </SceneObject>
+
+
+        </SceneObject>
+    </SceneObject>
+    
+	<LightObject name="Ambient" light="AMBIENT" rgb="(0.2, 0.15, 0.4)" direction="(0.0, -1.0, 0.0)"/>
+    <LightObject name="Sun" light="DIRECTIONAL" rgb="(1.1, 1.1, 0.8)" direction="(-5.0, -4.0, -1.0)"/>
+    
+    <RenderObject name="Prologue" scene="root" prologue="true"/>
+    <RenderObject name="Ambient" pass="Ambient" light="Ambient" scene="root">
+		<Clear buffer="TARGET" rgba="ffff0000"/>
+		<Clear buffer="ZBUFFER" z="1.0"/>
+    </RenderObject>
+    <RenderObject name="SunShadowStencil" pass="ShadowStencil" light="Sun" scene="root">
+		<Clear buffer="STENCIL" stencil="0"/>
+    </RenderObject>
+    <RenderObject name="SunDirectional" pass="Lighting" light="Sun" scene="root"/>
+
+    <GameObject name="playertank" sceneobject="tank" radius="1">
+        <PhysicsBody mass="3.0e2" moment="1.0e2" viscosity="1.5e2" position="(0, -40)" orientation="0"/>
+    </GameObject>
+    <GameObject name="enemytank 1" sceneobject="tank 2" radius="1">
+        <PhysicsBody mass="1.0e2" moment="1.0e2" viscosity="1.0e2" position="(40, 0)" orientation="180"/>
+    </GameObject>
+    <GameObject name="enemytank 2" sceneobject="tank 3" radius="1">
+        <PhysicsBody mass="1.0e2" moment="1.0e2" viscosity="1.0e2" position="(0, 40)" orientation="-90"/>
+    </GameObject>
+    <GameObject name="enemytank 3" sceneobject="tank 4" radius="1">
+        <PhysicsBody mass="4.0e2" moment="1.0e2" viscosity="1.0e2" position="(-40, 0)" orientation="90"/>
+    </GameObject>
+    <GameObject name="building 1" sceneobject="building 1" radius="3">
+        <PhysicsBody mass="0" moment="0" viscosity="1.0e3" position="(0, 21.42857)" orientation="0"/>
+    </GameObject>
+    <GameObject name="building 2" sceneobject="building 2" radius="3">
+        <PhysicsBody mass="0" moment="0" viscosity="1.0e3" position="(21.42857, 0)" orientation="0"/>
+    </GameObject>
+    <GameObject name="building 3" sceneobject="building 3" radius="3">
+        <PhysicsBody mass="0" moment="0" viscosity="1.0e3" position="(-21.42857, 0)" orientation="0"/>
+    </GameObject>
+    <GameObject name="building 4" sceneobject="building 4" radius="3">
+        <PhysicsBody mass="0" moment="0" viscosity="1.0e3" position="(0, -21.42857)" orientation="0"/>
+    </GameObject>
+    
+    <PlayerObject name="Human" type="PlayerHuman" gameobject="playertank" force="6.0e3" torque="3.0e2"/>
+    <PlayerObject name="Robot 1" type="PlayerRobot" gameobject="enemytank 1" force="1.0e3" torque="2.0e2" target="enemytank 3"/>
+    <PlayerObject name="Robot 2" type="PlayerRobot" gameobject="enemytank 2" force="1.1e3" torque="4.0e2" target="enemytank 1"/>
+    <PlayerObject name="Robot 3" type="PlayerRobot" gameobject="enemytank 3" force="1.2e3" torque="8.0e2" target="enemytank 2"/>
+    
+</xml>

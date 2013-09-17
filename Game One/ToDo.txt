@@ -1,0 +1,42 @@
+- texture and frame buffers named and abstracted, implies that we must do memory management on the video card now
+
+- frame buffers, how do we know to create an extra buffer? maybe in the device creation parameters
+
+- don't want to impose a content load by having to have separate buffer objects declared in XML for every texture 
+
+- renderpass description should set the target as one of the named buffers
+
+- renderstate needs to be able to specify a render target as a texture source
+
+- future demands may include grabbing the z-buffer as a shadow map, and having the render object specify which camera it uses
+
+- cameras will have to be specified in the XML as attached to some other object in the scene graph
+
+- camera types, following camera, fixed position, rigid attachment
+
+- lights will have to be able to get location just like they were a scene node, so light objects should be in the scene graph?
+
+- need a geometry type that draws from another file, with dynamic reload
+
+- needs to use updated sound stuff, 3D sounds, etc.
+
+- better memory management on text
+
+- a kd tree for scene management
+
+- need to split out scene creation so it can become a level mechanism
+
+- need screens, like splash screen, game screen, etc. Screens must re-use graphics device, etc. Screens must control input systems, to split player input from screen input.
+- Screen design, A base screen manager that uses a stack of screens, the top is the current screen. The base screen design implements the message loop for windows, a level screen implements the current scene paradigm
+
+- registrar needs to be updated to select a named registrar, and to use named events
+
+Other notes
+    + Screens
+    + Better rendering architecture
+    + Better Text Class
+    + 3D physics
+    + Integrate better collision detection mechanisms, try a few
+    + Network architecture
+    + Streaming loader for big worlds
+    + Make a game

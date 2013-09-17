@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Code">
+      <UniqueIdentifier>{fead9a6f-6452-4b4e-b2c4-e18860c5cb55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\DirectX">
+      <UniqueIdentifier>{e82c41b0-a54e-4c3f-b807-29ddd4b0e413}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\Game">
+      <UniqueIdentifier>{329aa84b-6662-4be9-938d-30f76eeacc75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\Geometry">
+      <UniqueIdentifier>{8628e2f2-4f62-47cb-b5a9-9ad9eb1fded9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\Player">
+      <UniqueIdentifier>{5f33c065-0ffe-407f-9619-801e65a50714}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\Scene">
+      <UniqueIdentifier>{da32ee23-6440-48d0-8ae1-09e7eb718b70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\Shared">
+      <UniqueIdentifier>{8d03093d-31c7-46e9-8940-ceef71538a8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\XML">
+      <UniqueIdentifier>{7d559bf1-f866-4e38-9ad7-4c37afa45c53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\Render">
+      <UniqueIdentifier>{38185bf6-e57f-434b-a724-6feb8fdbae65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\Screens">
+      <UniqueIdentifier>{4e19dbf1-0a83-4f1f-be30-5a2346ab5e97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data">
+      <UniqueIdentifier>{82bfac58-09e2-415f-8326-2e9699c20ffc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data\Effect Files">
+      <UniqueIdentifier>{3755e02a-b6a6-499d-bf1b-826da177149f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data\XML Files">
+      <UniqueIdentifier>{c40a0380-2232-4164-b447-ac8ae63ad6d1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Code\DirectX\direct_3d.cpp">
+      <Filter>Code\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\DirectX\direct_music.cpp">
+      <Filter>Code\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\DirectX\dx_debug.cpp">
+      <Filter>Code\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\DirectX\effect.cpp">
+      <Filter>Code\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Game\camera.cpp">
+      <Filter>Code\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Game\COM.cpp">
+      <Filter>Code\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Game\game.cpp">
+      <Filter>Code\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Game\game_object.cpp">
+      <Filter>Code\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Game\main.cpp">
+      <Filter>Code\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Game\physics_body.cpp">
+      <Filter>Code\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Game\timer.cpp">
+      <Filter>Code\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Game\window.cpp">
+      <Filter>Code\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Geometry\geometry_cube.cpp">
+      <Filter>Code\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Geometry\geometry_cylinder.cpp">
+      <Filter>Code\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Geometry\geometry_object.cpp">
+      <Filter>Code\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Geometry\geometry_object_indexed.cpp">
+      <Filter>Code\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Geometry\geometry_shadow.cpp">
+      <Filter>Code\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Geometry\vertex.cpp">
+      <Filter>Code\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Geometry\vertex_shadow.cpp">
+      <Filter>Code\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Player\player_human.cpp">
+      <Filter>Code\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Player\player_object.cpp">
+      <Filter>Code\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Player\player_robot.cpp">
+      <Filter>Code\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Scene\drawn_object.cpp">
+      <Filter>Code\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Scene\render_state.cpp">
+      <Filter>Code\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Scene\scene_graph_node.cpp">
+      <Filter>Code\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Scene\scene_object.cpp">
+      <Filter>Code\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Scene\transform_xml.cpp">
+      <Filter>Code\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Shared\advanced_math.cpp">
+      <Filter>Code\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Shared\bits.cpp">
+      <Filter>Code\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Shared\counted_object.cpp">
+      <Filter>Code\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Shared\debug.cpp">
+      <Filter>Code\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Shared\precompile.cpp">
+      <Filter>Code\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Shared\raw_text.cpp">
+      <Filter>Code\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Shared\task.cpp">
+      <Filter>Code\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Shared\task_registrar.cpp">
+      <Filter>Code\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Shared\text.cpp">
+      <Filter>Code\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Xml\scanner.cpp">
+      <Filter>Code\XML</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Xml\scanner_action.cpp">
+      <Filter>Code\XML</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Xml\scanner_state.cpp">
+      <Filter>Code\XML</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Xml\tokenizer.cpp">
+      <Filter>Code\XML</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Xml\xml_node.cpp">
+      <Filter>Code\XML</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Xml\xml_scanner.cpp">
+      <Filter>Code\XML</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Render\light_object.cpp">
+      <Filter>Code\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Render\render_object.cpp">
+      <Filter>Code\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Screens\scene_screen.cpp">
+      <Filter>Code\Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Screens\screen.cpp">
+      <Filter>Code\Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Screens\screen_manager.cpp">
+      <Filter>Code\Screens</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Code\DirectX\direct_3d.h">
+      <Filter>Code\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\DirectX\direct_music.h">
+      <Filter>Code\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\DirectX\dx_debug.h">
+      <Filter>Code\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\DirectX\dx_wrapper.h">
+      <Filter>Code\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\DirectX\effect.h">
+      <Filter>Code\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Game\camera.h">
+      <Filter>Code\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Game\game.h">
+      <Filter>Code\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Game\game_object.h">
+      <Filter>Code\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Game\light.h">
+      <Filter>Code\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Game\physics_body.h">
+      <Filter>Code\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Game\timer.h">
+      <Filter>Code\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Game\window.h">
+      <Filter>Code\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Geometry\geometry_cube.h">
+      <Filter>Code\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Geometry\geometry_cylinder.h">
+      <Filter>Code\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Geometry\geometry_object.h">
+      <Filter>Code\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Geometry\geometry_object_indexed.h">
+      <Filter>Code\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Geometry\geometry_shadow.h">
+      <Filter>Code\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Geometry\vertex.h">
+      <Filter>Code\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Geometry\vertex_shadow.h">
+      <Filter>Code\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Player\player_human.h">
+      <Filter>Code\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Player\player_object.h">
+      <Filter>Code\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Player\player_robot.h">
+      <Filter>Code\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Scene\drawn_object.h">
+      <Filter>Code\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Scene\render_pass.h">
+      <Filter>Code\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Scene\render_state.h">
+      <Filter>Code\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Scene\scene_graph_node.h">
+      <Filter>Code\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Scene\scene_object.h">
+      <Filter>Code\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Scene\transform_xml.h">
+      <Filter>Code\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Shared\advanced_math.h">
+      <Filter>Code\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Shared\assert.h">
+      <Filter>Code\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Shared\bits.h">
+      <Filter>Code\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Shared\counted_object.h">
+      <Filter>Code\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Shared\debug.h">
+      <Filter>Code\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Shared\definitions.h">
+      <Filter>Code\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Shared\dependency_graph.h">
+      <Filter>Code\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Shared\force_load.h">
+      <Filter>Code\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Shared\free_list.h">
+      <Filter>Code\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Shared\indexed_object.h">
+      <Filter>Code\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Shared\precompile.h">
+      <Filter>Code\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Shared\ptr_to.h">
+      <Filter>Code\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Shared\raw_text.h">
+      <Filter>Code\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Shared\resetter.h">
+      <Filter>Code\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Shared\singleton.h">
+      <Filter>Code\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Shared\std_allocator.h">
+      <Filter>Code\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Shared\task.h">
+      <Filter>Code\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Shared\task_registrar.h">
+      <Filter>Code\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Shared\text.h">
+      <Filter>Code\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Shared\text_map.h">
+      <Filter>Code\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Xml\scanner.h">
+      <Filter>Code\XML</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Xml\scanner_action.h">
+      <Filter>Code\XML</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Xml\scanner_state.h">
+      <Filter>Code\XML</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Xml\scanner_state_info.h">
+      <Filter>Code\XML</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Xml\token.h">
+      <Filter>Code\XML</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Xml\tokenizer.h">
+      <Filter>Code\XML</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Xml\xml_node.h">
+      <Filter>Code\XML</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Xml\xml_scanner.h">
+      <Filter>Code\XML</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Render\light_object.h">
+      <Filter>Code\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Render\render_object.h">
+      <Filter>Code\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Screens\scene_screen.h">
+      <Filter>Code\Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Screens\screen.h">
+      <Filter>Code\Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Screens\screen_manager.h">
+      <Filter>Code\Screens</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Code\Shared\advanced_math.inl">
+      <Filter>Code\Shared</Filter>
+    </None>
+    <None Include="Code\Shared\counted_object.inl">
+      <Filter>Code\Shared</Filter>
+    </None>
+    <None Include="Code\Shared\dependency_graph.inl">
+      <Filter>Code\Shared</Filter>
+    </None>
+    <None Include="Code\Shared\indexed_object.inl">
+      <Filter>Code\Shared</Filter>
+    </None>
+    <None Include="Code\Shared\ptr_to.inl">
+      <Filter>Code\Shared</Filter>
+    </None>
+    <None Include="Code\Shared\resetter.inl">
+      <Filter>Code\Shared</Filter>
+    </None>
+    <None Include="Code\Shared\singleton.inl">
+      <Filter>Code\Shared</Filter>
+    </None>
+    <None Include="Code\Shared\task.inl">
+      <Filter>Code\Shared</Filter>
+    </None>
+    <None Include="Code\Shared\text.inl">
+      <Filter>Code\Shared</Filter>
+    </None>
+    <None Include="Code\Xml\scanner_state.inl">
+      <Filter>Code\XML</Filter>
+    </None>
+    <None Include="Code\Xml\scanner_state_info.inl">
+      <Filter>Code\XML</Filter>
+    </None>
+    <None Include="Code\Xml\token.inl">
+      <Filter>Code\XML</Filter>
+    </None>
+    <None Include="Code\Xml\xml_node.inl">
+      <Filter>Code\XML</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Effect\BasicEffect.fx">
+      <Filter>Data\Effect Files</Filter>
+    </FxCompile>
+    <FxCompile Include="Effect\ShaderEffect.fx">
+      <Filter>Data\Effect Files</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="config.xml">
+      <Filter>Data\XML Files</Filter>
+    </Xml>
+    <Xml Include="Direct3D.xml">
+      <Filter>Data\XML Files</Filter>
+    </Xml>
+    <Xml Include="DirectSound.xml">
+      <Filter>Data\XML Files</Filter>
+    </Xml>
+    <Xml Include="Scene.xml">
+      <Filter>Data\XML Files</Filter>
+    </Xml>
+    <Xml Include="Screens.xml">
+      <Filter>Data\XML Files</Filter>
+    </Xml>
+    <Xml Include="Window.xml">
+      <Filter>Data\XML Files</Filter>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ToDo.txt" />
+  </ItemGroup>
+</Project>

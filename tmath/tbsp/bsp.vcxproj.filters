@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{43003dea-c4b0-4531-b6d0-36bf650605a5}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{0d444806-94f9-4bc6-ae5f-ceaf1c6371e2}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;r</Extensions>
+    </Filter>
+    <Filter Include="tgeom">
+      <UniqueIdentifier>{40c01685-d274-4132-8799-0d56ee9ecd59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bsp">
+      <UniqueIdentifier>{db7cb496-851f-4467-b350-baf6d3921da2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AssemblyInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bsp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tgeom\debug.cpp">
+      <Filter>tgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="bsp_tree.cpp">
+      <Filter>bsp</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="tgeom\assert.h">
+      <Filter>tgeom</Filter>
+    </ClInclude>
+    <ClInclude Include="tgeom\debug.h">
+      <Filter>tgeom</Filter>
+    </ClInclude>
+    <ClInclude Include="tgeom\definitions.h">
+      <Filter>tgeom</Filter>
+    </ClInclude>
+    <ClInclude Include="tgeom\fuzzy_math.h">
+      <Filter>tgeom</Filter>
+    </ClInclude>
+    <ClInclude Include="tgeom\intersect.h">
+      <Filter>tgeom</Filter>
+    </ClInclude>
+    <ClInclude Include="tgeom\line_test.h">
+      <Filter>tgeom</Filter>
+    </ClInclude>
+    <ClInclude Include="tgeom\plane.h">
+      <Filter>tgeom</Filter>
+    </ClInclude>
+    <ClInclude Include="tgeom\poly.h">
+      <Filter>tgeom</Filter>
+    </ClInclude>
+    <ClInclude Include="tgeom\tgeom.h">
+      <Filter>tgeom</Filter>
+    </ClInclude>
+    <ClInclude Include="tgeom\vector.h">
+      <Filter>tgeom</Filter>
+    </ClInclude>
+    <ClInclude Include="tgeom\vector2.h">
+      <Filter>tgeom</Filter>
+    </ClInclude>
+    <ClInclude Include="tgeom\vector3.h">
+      <Filter>tgeom</Filter>
+    </ClInclude>
+    <ClInclude Include="bsp_tree.h">
+      <Filter>bsp</Filter>
+    </ClInclude>
+    <ClInclude Include="free_list.h">
+      <Filter>bsp</Filter>
+    </ClInclude>
+    <ClInclude Include="meta.h">
+      <Filter>bsp</Filter>
+    </ClInclude>
+    <ClInclude Include="std_allocator.h">
+      <Filter>bsp</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="tgeom\intersect.inl">
+      <Filter>tgeom</Filter>
+    </None>
+    <None Include="tgeom\plane.inl">
+      <Filter>tgeom</Filter>
+    </None>
+    <None Include="tgeom\poly.inl">
+      <Filter>tgeom</Filter>
+    </None>
+    <None Include="tgeom\vector2.inl">
+      <Filter>tgeom</Filter>
+    </None>
+    <None Include="tgeom\vector3.inl">
+      <Filter>tgeom</Filter>
+    </None>
+  </ItemGroup>
+</Project>

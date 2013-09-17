@@ -1,0 +1,48 @@
+//------------------------------------------------------------------------------
+// Copyright (C) 2006 Bretton Wade, All Rights Reserved
+//------------------------------------------------------------------------------
+
+#ifndef     _SCREEN_H_
+#define     _SCREEN_H_
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+// BEGIN DECLARATIONS
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+//------------------------------------------------------------------------------
+// includes
+//------------------------------------------------------------------------------
+#ifndef     _LAYOUT_H_
+#include    "layout.h"
+#endif  //  _LAYOUT_H_
+
+#ifndef     _SPIDER_H_
+#include    "spider.h"
+#endif  //  _SPIDER_H_
+
+//------------------------------------------------------------------------------
+// values
+//------------------------------------------------------------------------------
+enum
+{
+    SCREEN_WIDTH            =   (SPIDER_STACKS * CARD_X_SIZE) + ((SPIDER_STACKS - 1) * CARD_SPACING) + (2 * CARD_X_INDENT),
+    SCREEN_HEIGHT           =   268 * SCALE_FACTOR,
+    STACK_HEIGHT            =   (SCREEN_HEIGHT - ((2 * CARD_Y_INDENT) + CARD_Y_SIZE + CARD_SPACING)),
+    STACK_DN_MAX_SIZE       =   (5 * CARD_HEIGHT_OFFSET_DN),
+    STACK_UP_MAX            =   ((STACK_HEIGHT - CARD_Y_SIZE) / CARD_HEIGHT_OFFSET_DN),
+    STACK_UP_MAX_FS         =   ((STACK_HEIGHT - (CARD_Y_SIZE + STACK_DN_MAX_SIZE)) / CARD_HEIGHT_OFFSET_UP)
+};
+
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+// END DECLARATIONS
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+#endif  //  _SCREEN_H_
+
+#ifdef      _SCREEN_CPP_
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+// BEGIN DEFINITIONS
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+// END DEFINITIONS
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+#endif  //  _SCREEN_CPP_

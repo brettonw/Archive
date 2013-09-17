@@ -1,0 +1,45 @@
+[Strings] 
+CompanyName = "Clockwork 3"
+
+[CEStrings]
+AppName = "Spider"
+InstallDir = %CE1%\%CompanyName%
+
+[Version]
+Signature = "$Windows NT$"
+Provider = %CompanyName%
+CESignature = "$Windows CE$"
+
+[Shortcuts]
+%AppName%,0,%AppName%.exe
+
+[Shortcuts2]
+%AppName%,0,%AppName%.exe
+
+[Shortcuts3]
+%AppName%,0,%AppName%.exe
+
+[SourceDisksNames.SA]
+1 = ,"Common files",,
+
+[SourceDisksFiles.SA]
+%AppName%.exe = 1
+
+[Files.SA]
+%AppName%.exe
+
+[DefaultInstall]
+CEShortcuts=Shortcuts,Shortcuts2,Shortcuts3
+
+[DefaultInstall.SA]
+CopyFiles=Files.SA
+
+[DestinationDirs]
+Shortcuts = ,%CE8%
+Shortcuts2 = ,%CE11%
+Shortcuts3 = ,%CE14%
+Files.SA = ,%InstallDir%
+
+[CEDevice]
+VersionMin = 5.0
+VersionMax = 5.0

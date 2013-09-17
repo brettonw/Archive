@@ -1,0 +1,69 @@
+<xml>
+  <Device
+        Windowed=                   "TRUE"
+        EnableAutoDepthStencil=     "TRUE"
+        AutoDepthStencilFormat=     "D3DFMT_D24S8"
+        MultiSampleType=            "D3DMULTISAMPLE_4_SAMPLES"
+        PresentationInterval=       "D3DPRESENT_INTERVAL_ONE"
+    />
+    <Device
+        Windowed=                   "TRUE"
+        EnableAutoDepthStencil=     "TRUE"
+        AutoDepthStencilFormat=     "D3DFMT_D24S8"
+        MultiSampleType=            "D3DMULTISAMPLE_2_SAMPLES"
+        PresentationInterval=       "D3DPRESENT_INTERVAL_ONE"
+    />
+    <Device
+        Windowed=                   "TRUE"
+        EnableAutoDepthStencil=     "TRUE"
+        AutoDepthStencilFormat=     "D3DFMT_D24S8"
+        PresentationInterval=       "D3DPRESENT_INTERVAL_ONE"
+    />
+    <Device
+        Windowed=                   "FALSE"
+        BackBufferWidth=            "1280"
+        BackBufferHeight=           "800"
+        FullScreen_RefreshRateInHz= "60"
+        BackBufferFormat=           "D3DFMT_X8R8G8B8"
+        EnableAutoDepthStencil=     "TRUE"
+        AutoDepthStencilFormat=     "D3DFMT_D24S8"
+        MultiSampleType=            "D3DMULTISAMPLE_4_SAMPLES"
+        PresentationInterval=       "D3DPRESENT_INTERVAL_ONE"
+    />
+    <Device
+        Windowed=                   "FALSE"
+        BackBufferWidth=            "800"
+        BackBufferHeight=           "600"
+        FullScreen_RefreshRateInHz= "60"
+        BackBufferFormat=           "D3DFMT_X8R8G8B8"
+        EnableAutoDepthStencil=     "TRUE"
+        AutoDepthStencilFormat=     "D3DFMT_D24S8"
+        MultiSampleType=            "D3DMULTISAMPLE_4_SAMPLES"
+        PresentationInterval=       "D3DPRESENT_INTERVAL_ONE"
+    />
+    <Device
+        Windowed=                   "FALSE"
+        BackBufferWidth=            "800"
+        BackBufferHeight=           "600"
+        FullScreen_RefreshRateInHz= "60"
+        BackBufferFormat=           "D3DFMT_X8R8G8B8"
+        EnableAutoDepthStencil=     "TRUE"
+        AutoDepthStencilFormat=     "D3DFMT_D24S8"
+        MultiSampleType=            "D3DMULTISAMPLE_2_SAMPLES"
+        PresentationInterval=       "D3DPRESENT_INTERVAL_ONE"
+    />
+    <Device
+        Windowed=                   "FALSE"
+        BackBufferWidth=            "800"
+        BackBufferHeight=           "600"
+        FullScreen_RefreshRateInHz= "60"
+        BackBufferFormat=           "D3DFMT_X8R8G8B8"
+        EnableAutoDepthStencil=     "TRUE"
+        AutoDepthStencilFormat=     "D3DFMT_D24S8"
+        PresentationInterval=       "D3DPRESENT_INTERVAL_ONE"
+    />
+    
+    <Effect name="BasicEffect" filename="BasicEffect.fx"/>
+    <Effect name="ShaderEffect" filename="ShaderEffect.fx"/>
+    
+</xml>

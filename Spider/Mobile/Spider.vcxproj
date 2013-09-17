@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ClCompile Include="application.cpp" />
+    <ClCompile Include="..\Common\compilation.cpp" />
+    <ClCompile Include="..\Common\precompile.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4C4C1E19-CC0C-49C6-8334-E6CE613887ED}</ProjectGuid>
+    <RootNamespace>Spider</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.51106.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\action.h" />
+    <ClInclude Include="..\Common\action_composite.h" />
+    <ClInclude Include="..\Common\action_flip.h" />
+    <ClInclude Include="..\Common\action_sound.h" />
+    <ClInclude Include="..\Common\action_split.h" />
+    <ClInclude Include="..\Common\card.h" />
+    <ClInclude Include="..\Common\cards.h" />
+    <ClInclude Include="..\Common\deck.h" />
+    <ClInclude Include="..\Common\layout.h" />
+    <ClInclude Include="..\Common\list_node.h" />
+    <ClInclude Include="..\Common\play.h" />
+    <ClInclude Include="precompile.h" />
+    <ClInclude Include="..\Common\random.h" />
+    <ClInclude Include="..\Common\registry.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="..\Common\screen.h" />
+    <ClInclude Include="..\Common\spider.h" />
+    <ClInclude Include="..\Common\stack.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Art\small.ico" />
+    <None Include="..\Art\spider.ico" />
+    <None Include="spider.inf" />
+    <None Include="..\ToDo.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="spider.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
