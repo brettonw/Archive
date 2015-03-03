@@ -1,5 +1,5 @@
 //-----------------------------------------------------------------------------
-// Copyright (C) 2006 Bretton Wade and Firaxis Games, All Rights Reserved
+// Copyright (C) 2006 Bretton Wade, All Rights Reserved
 //-----------------------------------------------------------------------------
 
 #ifndef     _CONSTRAINTS_H_

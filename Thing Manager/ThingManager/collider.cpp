@@ -1,5 +1,5 @@
 //-----------------------------------------------------------------------------
-// Copyupper (C) 2006 Bretton Wade and Firaxis Games, All Rights Reserved
+// Copyupper (C) 2006 Bretton Wade, All Rights Reserved
 //-----------------------------------------------------------------------------
 
 #include    "precompile.h"

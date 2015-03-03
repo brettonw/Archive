@@ -1,6 +1,5 @@
 //-----------------------------------------------------------------------------
-// Copyright (C) 2002 Bretton Wade and Firaxis Games, All rights reserved
-// This file may be freely transmitted for educational purposes only
+// Copyright (C) 2002 Bretton Wade, All rights reserved
 //-----------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------
