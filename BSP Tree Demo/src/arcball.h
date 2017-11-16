@@ -13,7 +13,7 @@ private:
     vector_3d mapToSphere (const point_2d &pt);
 
 protected:
-    vector_2d center;
+    Vector_2d center;
     real radius;
     vector_3d start_vec;
     vector_3d end_vec;

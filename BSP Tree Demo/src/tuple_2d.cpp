@@ -1,72 +1,34 @@
-//------------------------------------------------------------------------------
-//	File:					tuple_2d.cp
-//	Date:					8/26/94
-//	Author:				Bretton Wade
-//
-//	Description:	this file contains the methods for a tuple_2d
-//
-//------------------------------------------------------------------------------
-
 #include "precompile.h"
 #include "utility.h"
 #include "tuple_2d.h"
 
-//------------------------------------------------------------------------------
-//	constructor
-//------------------------------------------------------------------------------
-tuple_2d::tuple_2d (const tuple_2d &t)																					//	copy constructor
-{																																								//	begin
-	xy[X] = t[X]; xy[Y] = t[Y];																										//	copy the values into the tuple_2d
-}																																								//	end
+Tuple_2d::Tuple_2d (const Tuple_2d &t) {
+    xy[X] = t[X]; xy[Y] = t[Y];
+}
 
-//------------------------------------------------------------------------------
-//	constructor
-//------------------------------------------------------------------------------
-tuple_2d::tuple_2d (real x, real y)																							//	constructor from 2 values
-{																																								//	begin
-	xy[X] = x; xy[Y] = y;																													//	copy the values into the tuple_2d
-}																																								//	end
+Tuple_2d::Tuple_2d (real x, real y) {
+    xy[X] = x; xy[Y] = y;
+}
 
-//------------------------------------------------------------------------------
-//	assignment operator
-//------------------------------------------------------------------------------
-void	tuple_2d::operator = (const tuple_2d &t)																	//	assignment operator
-{																																								//	begin
-	xy[X] = t[X]; xy[Y] = t[Y];																										//	copy the values into the tuple_2d
-}																																								//	end
+void Tuple_2d::operator = (const Tuple_2d &t) {
+    xy[X] = t[X]; xy[Y] = t[Y];
+}
 
-//------------------------------------------------------------------------------
-//	equality test
-//------------------------------------------------------------------------------
-bool	tuple_2d::operator == (const tuple_2d &t) const														//	equality operator
-{																																								//	begin
-	return	bool ((FABS (xy[X] - t[X]) < EPSILON) && 															//	compare the x coordinates
-								(FABS (xy[Y] - t[Y]) < EPSILON));																//	compare the w coordinates			
-}																																								//	end
+bool Tuple_2d::operator == (const Tuple_2d &t) const {
+    return bool ((FABS (xy[X] - t[X]) < EPSILON) &&
+        (FABS (xy[Y] - t[Y]) < EPSILON));
+}
 
-//------------------------------------------------------------------------------
-//	inequality test
-//------------------------------------------------------------------------------
-bool	tuple_2d::operator != (const tuple_2d &t) const														//	inequality operator
-{																																								//	begin
-	return	bool ((FABS (xy[X] - t[X]) > EPSILON) || 															//	compare the x coordinates
-								(FABS (xy[Y] - t[Y]) > EPSILON));																//	compare the w coordinates			
-}																																								//	end
+bool Tuple_2d::operator != (const Tuple_2d &t) const {
+    return bool ((FABS (xy[X] - t[X]) > EPSILON) ||
+        (FABS (xy[Y] - t[Y]) > EPSILON));
+}
 
-//------------------------------------------------------------------------------
-//	assignment
-//------------------------------------------------------------------------------
-void	tuple_2d::operator () (real x, real y)																		//	function call operator
-{																																								//	begin
-	xy[X] = x; xy[Y] = y;																													//	copy the values into the tuple_2d
-}																																								//	end
+void Tuple_2d::operator () (real x, real y) {
+    xy[X] = x; xy[Y] = y;
+}
 
-//------------------------------------------------------------------------------
-//	dot product
-//------------------------------------------------------------------------------
-real	tuple_2d::operator | (const tuple_2d &t) const														//	inner product operator
-{																																								//	begin
-	return 	(xy[X] * t[X]) + (xy[Y] * t[Y]);																			//	coordinate multiply
-}																																								//	end
+real Tuple_2d::operator | (const Tuple_2d &t) const {
+    return  (xy[X] * t[X]) + (xy[Y] * t[Y]);
+}
 
-//------------------------------------------------------------------------------

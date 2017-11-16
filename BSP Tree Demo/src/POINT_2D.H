@@ -16,21 +16,21 @@
 //	classes
 //------------------------------------------------------------------------------
 #ifndef	VECTOR_2D
-class	vector_2d;																																//	forward declaration
+class	Vector_2d;																																//	forward declaration
 #endif
 
 //------------------------------------------------------------------------------
-class	point_2d : public tuple_2d																								//	point_2d class
+class	point_2d : public Tuple_2d																								//	point_2d class
 {																																								//	begin
 	protected:																																		//	members internal to this class hierarchy
 	public:																																				//	members available externally
 				point_2d (void) {}																											//	default constructor
 				point_2d (real x, real y);																							//	normal constructor
 				point_2d (const point_2d &p);																						//	copy constructor
-				point_2d (const vector_2d &v);																					//	constructor from a 2d vector_3d
+				point_2d (const Vector_2d &v);																					//	constructor from a 2d vector_3d
 				point_2d	&operator = (const point_2d &p);															//	assignment operator
-				point_2d	operator + (const vector_2d &v) const;												//	add a vector_3d to a point
-				vector_2d	operator - (const point_2d &p) const;													//	subtract two points
+				point_2d	operator + (const Vector_2d &v) const;												//	add a vector_3d to a point
+				Vector_2d	operator - (const point_2d &p) const;													//	subtract two points
 };																																							//	end
 
 //------------------------------------------------------------------------------

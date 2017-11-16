@@ -9,6 +9,9 @@
     <ClCompile Include="src\arcball.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\bound_3d.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
     <ClCompile Include="src\bspnode_3d.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -18,7 +21,10 @@
     <ClCompile Include="src\camera_3d.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\CUBE.CPP">
+    <ClCompile Include="src\counted_object.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cube.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="src\initapp.cpp">
@@ -39,10 +45,10 @@
     <ClCompile Include="src\plane_3d.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\POINT_2D.CPP">
+    <ClCompile Include="src\point_2d.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\POINT_3D.CPP">
+    <ClCompile Include="src\point_3d.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="src\polygon_3d.cpp">
@@ -57,13 +63,13 @@
     <ClCompile Include="src\quaternion_3d.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\RAY_3D.CPP">
+    <ClCompile Include="src\ray_3d.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="src\rcpolygon_3d.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\SPLIT.CPP">
+    <ClCompile Include="src\split.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="src\transform_3d.cpp">
@@ -84,12 +90,12 @@
     <ClCompile Include="src\view.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\bound_3d.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\arcball.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bound_3d.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\bspnode_3d.h">
@@ -101,10 +107,13 @@
     <ClInclude Include="src\camera_3d.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\COORD.H">
+    <ClInclude Include="src\coord.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\CUBE.H">
+    <ClInclude Include="src\counted_object.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cube.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\iterator_3d.h">
@@ -119,13 +128,13 @@
     <ClInclude Include="src\object_3d.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\PLANE_3D.H">
+    <ClInclude Include="src\plane_3d.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\POINT_2D.H">
+    <ClInclude Include="src\point_2d.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\POINT_3D.H">
+    <ClInclude Include="src\point_3d.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\polygon_3d.h">
@@ -143,16 +152,25 @@
     <ClInclude Include="src\quaternion_3d.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\RAY_3D.H">
+    <ClInclude Include="src\ray_3d.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\rcpolygon_3d.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\SPLIT.H">
+    <ClInclude Include="src\split.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\transform_3d.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tuple_2d.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tuple_3d.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utility.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\vector_2d.h">
@@ -164,17 +182,16 @@
     <ClInclude Include="src\view.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\bound_3d.h">
+    <ClInclude Include="src\ptr_to.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\utility.h">
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\counted_object.inl">
       <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\tuple_3d.h">
+    </None>
+    <None Include="src\ptr_to.inl">
       <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\tuple_2d.h">
-      <Filter>src</Filter>
-    </ClInclude>
+    </None>
   </ItemGroup>
 </Project>

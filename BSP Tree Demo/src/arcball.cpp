@@ -4,7 +4,7 @@
 #include "view.h"
 
 Arcball::Arcball (const point_2d &cent, real rad) {
-    center = vector_2d (cent);
+    center = Vector_2d (cent);
     radius = rad;
 }
 

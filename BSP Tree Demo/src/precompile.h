@@ -1,14 +1,14 @@
 //------------------------------------------------------------------------------
-//	Win95 Headers
+// Win95 Headers
 //------------------------------------------------------------------------------
-#define	WIN32_LEAN_AND_MEAN
+#define WIN32_LEAN_AND_MEAN
 #include <windows.h>
 #include <windowsx.h>
-#undef	max
-#undef	min
+#undef max
+#undef min
 
 //------------------------------------------------------------------------------
-//	ANSI headers
+// ANSI headers
 //------------------------------------------------------------------------------
 #include <limits.h>
 #include <float.h>
@@ -17,86 +17,101 @@
 #include <stdlib.h>
 
 //------------------------------------------------------------------------------
-//	defines
+// defines
 //------------------------------------------------------------------------------
-//#define	USE_FLOATS																															//	whether or not the real type is a float
+//#define USE_FLOATS 
 
 //------------------------------------------------------------------------------
-//	types
+// types
 //------------------------------------------------------------------------------
-typedef	unsigned short ushort;																									//	abbreviation
-typedef	unsigned long ulong;																									//	abbreviation
-typedef	unsigned char uchar;																									//	abbreviation
-typedef	char* cstr;																									//	a C style string (NULL terminated)
-typedef	uchar* pstr;																									//	a pascal style string (preceded by a length byte)
-#ifdef	USE_FLOATS																															//	if the real type is a float
-typedef	float real;																										//	common name for floating point type
-#else																																						//	otherwise
-typedef	double real;																										//	common name for floating point type
-#endif																																					//	end
+typedef unsigned short ushort; 
+typedef unsigned int uint; 
+typedef unsigned long ulong; 
+typedef unsigned char uchar; 
+typedef char* cstr; 
+typedef uchar* pstr; 
+#ifdef USE_FLOATS 
+typedef float real; 
+#else 
+typedef double real; 
+#endif 
 
 //------------------------------------------------------------------------------
-//	enumerations
+// enumerations
 //------------------------------------------------------------------------------
-#ifndef	bool																																		//	if the compiler does nto recognize the keyword 'bool'
-#define	bool int																																//	use an int instead
-#endif																																					//	end
-#ifndef	TRUE																																		//	if TRUE and FALSE are not defined
-#define	TRUE	1																																	//	define TRUE
-#define	FALSE	0																																	//	define FALSE
-#endif																																					//	end
+#ifndef bool 
+#define bool int 
+#endif 
+#ifndef TRUE 
+#define TRUE 1 
+#define FALSE 0 
+#endif 
 
 //------------------------------------------------------------------------------
-//	macros
+// macros
 //------------------------------------------------------------------------------
-#ifdef	USE_FLOATS																															//	if the real type is a float
-#define	R(num)	(num ## F)																											//	want constants to have an F after them to specify float types
-#else																																						//	otherwise
-#define	R(num)	(num)																														//	want constants to have an L after them to specify long double types
-#endif																																					//	end
+#ifdef USE_FLOATS 
+#define R(num) (num ## F) 
+#else 
+#define R(num) (num) 
+#endif 
 
-#define	TopLeft(r)	(((Point *) &(r))[0])																				//	an easy way to get a point from a rectangle
-#define	BotRight(r)	(((Point *) &(r))[1])																				//	an easy way to get a point from a rectangle
-#define	hiword(val)	((ulong (val) & 0xFFFF0000) >> 16)													//	make a short from the hiword of a long word
-#define	loword(val)	(val & 0x0000FFFF)																					//	want only the low word of a long word
-
-//------------------------------------------------------------------------------
-//	synonyms
-//------------------------------------------------------------------------------
-#ifdef	USE_FLOATS																															//	if the real type is a float
-#define	COS		cosf																															//	use float version of function for speed
-#define	ACOS	acos																															//	use float version of function for speed
-#define	SIN		sinf																															//	use float version of function for speed
-#define	ASIN	asinf																															//	use float version of function for speed
-#define	TAN		tanf																																//	use float version of function for speed
-#define	ATAN	atanf																															//	use float version of function for speed
-#define	ATAN2	atan2f																														//	use float version of function for speed
-#define	SQRT	sqrtf																															//	use float version of function for speed
-#define	FABS	fabsf																															//	use float version of function for speed
-#define	POW		powf																															//	use float version of function for speed
-#define	FLOOR	floorf																															//	use float version of function for speed
-#else																																						//	otherwise, use the double versions
-#define	COS		cos																																//	use normal version of function
-#define	ACOS	acos																															//	use normal version of function
-#define	SIN		sin																																//	use normal version of function
-#define	ASIN	asin																															//	use normal version of function
-#define	TAN		tan																																//	use normal version of function
-#define	ATAN	atan																															//	use normal version of function
-#define	ATAN2	atan2																															//	use normal version of function
-#define	SQRT	sqrt																															//	use normal version of function
-#define	FABS	fabs																															//	use normal version of function
-#define	POW		pow																																//	use normal version of function
-#define	FLOOR	floor																															//	use float version of function for speed
-#endif																																					//	end real type is a float
+#define TopLeft(r) (((Point *) &(r))[0]) 
+#define BotRight(r) (((Point *) &(r))[1]) 
+#define hiword(val) ((ulong (val) & 0xFFFF0000) >> 16) 
+#define loword(val) (val & 0x0000FFFF) 
 
 //------------------------------------------------------------------------------
-//	constants
+// synonyms
 //------------------------------------------------------------------------------
-//const real INFINITY = R(100000.0);																						//	floating point infinity value
-const real EPSILON = R(1.0) / R(100000.0);																		//	floating point epsilon value
-#ifndef	PI
-const real PI = R(3.14159265358979323846);																		//	pi
+#define and     &&
+#define or      ||
+#define not     !
+#define xor     ^
+#define and_eq  &=
+#define bit_and &
+#define bitand  &
+#define bit_or  |
+#define bitor   |
+#define compl   ~
+#define not_eq  !=
+#define or_eq   |=
+#define xor_eq  ^=
+
+#ifdef USE_FLOATS 
+#define COS  cosf 
+#define ACOS acos 
+#define SIN  sinf 
+#define ASIN asinf 
+#define TAN  tanf 
+#define ATAN atanf 
+#define ATAN2 atan2f 
+#define SQRT sqrtf 
+#define FABS fabsf 
+#define POW  powf 
+#define FLOOR floorf 
+#else 
+#define COS  cos 
+#define ACOS acos 
+#define SIN  sin 
+#define ASIN asin 
+#define TAN  tan 
+#define ATAN atan 
+#define ATAN2 atan2 
+#define SQRT sqrt 
+#define FABS fabs 
+#define POW  pow 
+#define FLOOR floor 
+#endif 
+
+//------------------------------------------------------------------------------
+// constants
+//------------------------------------------------------------------------------
+//const real INFINITY = R(100000.0); 
+const real EPSILON = R(1.0) / R(100000.0); 
+#ifndef PI
+const real PI = R(3.14159265358979323846); 
 #endif
-const real TWO_PI = PI * R(2.0);																							//	two times pi
+const real TWO_PI = PI * R(2.0); 
 
 //------------------------------------------------------------------------------

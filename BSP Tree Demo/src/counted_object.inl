@@ -6,58 +6,36 @@
 #ifndef     _COUNTED_OBJECT_INL_
 #define     _COUNTED_OBJECT_INL_
 
-//-----------------------------------------------------------------------------
-// include files
-//-----------------------------------------------------------------------------
 #ifndef     _COUNTED_OBJECT_H_
 #include    "counted_object.h"
 #endif  //  _COUNTED_OBJECT_H_
 
-//-----------------------------------------------------------------------------
-// class methods
-//-----------------------------------------------------------------------------
 inline
-/* void */
-CountedObject::CountedObject (void)
-{
-    m_count = 0;
+CountedObject::CountedObject (void) {
+    count = 0;
 #ifndef NDEBUG
-    m_ID = ++s_ID;
+    id = ++s_id;
 #endif
 }
 
-//-----------------------------------------------------------------------------
 inline
-/* void */
-CountedObject::CountedObject (const CountedObject& /* object */)
-{
-    m_count = 0;
+CountedObject::CountedObject (const CountedObject& /* object */) {
+    count = 0;
 }
 
-//-----------------------------------------------------------------------------
 inline
-void
-CountedObject::AddRef (void)
-{
-    m_count++;
+void CountedObject::addRef (void) {
+    count++;
 }
 
-//-----------------------------------------------------------------------------
 inline
-uInt4
-CountedObject::RemoveRef (void)
-{
-    return --m_count;
+uint CountedObject::removeRef (void) {
+    return --count;
 }
 
-//-----------------------------------------------------------------------------
 inline
-uInt4
-CountedObject::GetCount (void) const
-{
-    return m_count;
+uint CountedObject::getCount (void) const {
+    return count;
 }
-
-//-----------------------------------------------------------------------------
 
 #endif  //  _COUNTED_OBJECT_INL_

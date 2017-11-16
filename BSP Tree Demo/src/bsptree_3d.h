@@ -1,11 +1,15 @@
 #include	"split.h"
 #include	"listptr_3d.h"
 
+#ifndef     _COUNTED_OBJECT_H_
+#include    "counted_object.h"
+#endif  //  _COUNTED_OBJECT_H_
+
 #ifndef BSPTREE
 #define BSPTREE
 
 class	BspNode;
-class	BspTree {
+class	BspTree : public CountedObject {
 protected:
     BspNode	*node;
 

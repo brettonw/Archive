@@ -19,21 +19,21 @@ point_2d	ORIGIN_2D (R(0.0), R(0.0));																						//	the origin of the c
 //------------------------------------------------------------------------------
 //	constructor
 //------------------------------------------------------------------------------
-point_2d::point_2d (real x, real y) : tuple_2d (x, y)														//	normal constructor
+point_2d::point_2d (real x, real y) : Tuple_2d (x, y)														//	normal constructor
 {																																								//	begin
 }																																								//	end
 
 //------------------------------------------------------------------------------
 //	constructor
 //------------------------------------------------------------------------------
-point_2d::point_2d (const point_2d &p) : tuple_2d (p)														//	copy constructor
+point_2d::point_2d (const point_2d &p) : Tuple_2d (p)														//	copy constructor
 {																																								//	begin
 }																																								//	end
 
 //------------------------------------------------------------------------------
 //	constructor
 //------------------------------------------------------------------------------
-point_2d::point_2d (const vector_2d &v) : tuple_2d (v)														//	constructor from a 2d vector
+point_2d::point_2d (const Vector_2d &v) : Tuple_2d (v)														//	constructor from a 2d vector
 {																																								//	begin
 }																																								//	end
 
@@ -42,14 +42,14 @@ point_2d::point_2d (const vector_2d &v) : tuple_2d (v)														//	construct
 //------------------------------------------------------------------------------
 point_2d	&point_2d::operator = (const point_2d &p)															//	assignment operator
 {																																								//	begin
-	tuple_2d::operator = (p);
+	Tuple_2d::operator = (p);
 	return *this;
 }																																								//	end
 
 //------------------------------------------------------------------------------
 //	vector addition operator
 //------------------------------------------------------------------------------
-point_2d	point_2d::operator + (const vector_2d &v) const												//	add a vector to a point
+point_2d	point_2d::operator + (const Vector_2d &v) const												//	add a vector to a point
 {																																								//	begin
 	return point_2d (xy[X] + v[X], xy[Y] + v[Y]);
 }																																								//	end
@@ -57,9 +57,9 @@ point_2d	point_2d::operator + (const vector_2d &v) const												//	add a vec
 //------------------------------------------------------------------------------
 //	subtraction operator
 //------------------------------------------------------------------------------
-vector_2d	point_2d::operator - (const point_2d &p) const												//	subtract two points
+Vector_2d	point_2d::operator - (const point_2d &p) const												//	subtract two points
 {																																								//	begin
-	return vector_2d (xy[X] - p[X], xy[Y] - p[Y]);
+	return Vector_2d (xy[X] - p[X], xy[Y] - p[Y]);
 }																																								//	end
 
 //------------------------------------------------------------------------------
