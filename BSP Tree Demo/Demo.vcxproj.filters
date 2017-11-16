@@ -1,187 +1,180 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{b3e5d920-b471-4a10-9634-6d83768e55f3}</UniqueIdentifier>
-      <Extensions>cpp;c;cxx;rc;def;r;odl;hpj;bat;for;f90</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{3165bc97-7045-488b-ae18-6778ff20c942}</UniqueIdentifier>
+    <Filter Include="src">
+      <UniqueIdentifier>{48afb9d1-6562-49f8-a7bc-605c8ec348ca}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="source\arcball.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\arcball.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="source\bound_3d.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\BOUND_3D.CPP">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="source\bspnode_3d.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\bspnode_3d.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="source\bsptree_3d.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\bsptree_3d.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="source\camera_3d.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\camera_3d.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="source\cube.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\CUBE.CPP">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="source\initapp.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\initapp.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="source\iterator_3d.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\iterator_3d.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="source\listptr_3d.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\listptr_3d.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="source\matrix_3d.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\matrix_3d.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="source\object_3d.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\object_3d.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="source\plane_3d.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\plane_3d.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="source\point_2d.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\POINT_2D.CPP">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="source\point_3d.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\POINT_3D.CPP">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="source\polygon_3d.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\polygon_3d.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="source\polylist_3d.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\polylist_3d.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="source\polyptr_3d.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\polyptr_3d.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="source\quaternion_3d.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\quaternion_3d.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="source\ray_3d.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\RAY_3D.CPP">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="source\rcpolygon_3d.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\rcpolygon_3d.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="source\split.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\SPLIT.CPP">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="source\transform_3d.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\transform_3d.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="source\tuple_2d.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\tuple_2d.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="source\tuple_3d.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\tuple_3d.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="source\vector_2d.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\vector_2d.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="source\vector_3d.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\vector_3d.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="source\view.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\view.cpp">
+      <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="INCLUDE\BOUND_3D.H">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\arcball.h">
+      <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="INCLUDE\bspnode_3d.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\BOUND_3D.H">
+      <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="INCLUDE\bsptree_3d.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\bspnode_3d.h">
+      <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="INCLUDE\camera_3d.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\bsptree_3d.h">
+      <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="INCLUDE\COORD.H">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\camera_3d.h">
+      <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="INCLUDE\CUBE.H">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\COORD.H">
+      <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="INCLUDE\iterator_3d.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\CUBE.H">
+      <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="INCLUDE\listptr_3d.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\iterator_3d.h">
+      <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="INCLUDE\matrix_3d.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\listptr_3d.h">
+      <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="INCLUDE\object_3d.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\matrix_3d.h">
+      <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="INCLUDE\PI.H">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\object_3d.h">
+      <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="INCLUDE\PLANE_3D.H">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\PLANE_3D.H">
+      <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="INCLUDE\POINT_2D.H">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\POINT_2D.H">
+      <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="INCLUDE\POINT_3D.H">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\POINT_3D.H">
+      <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="INCLUDE\polygon_3d.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\polygon_3d.h">
+      <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="INCLUDE\polylist_3d.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\polylist_3d.h">
+      <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="INCLUDE\polyptr_3d.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\polyptr_3d.h">
+      <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="INCLUDE\precompile.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\precompile.h">
+      <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="INCLUDE\quaternion_3d.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\quaternion_3d.h">
+      <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="INCLUDE\RAY_3D.H">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\RAY_3D.H">
+      <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="INCLUDE\rcpolygon_3d.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\rcpolygon_3d.h">
+      <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="INCLUDE\SPLIT.H">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\SPLIT.H">
+      <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="INCLUDE\transform_3d.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\transform_3d.h">
+      <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="INCLUDE\TUPLE_2D.H">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\TUPLE_2D.H">
+      <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="INCLUDE\TUPLE_3D.H">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\TUPLE_3D.H">
+      <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="INCLUDE\UTILITY.H">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\UTILITY.H">
+      <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="INCLUDE\vector_2d.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\vector_2d.h">
+      <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="INCLUDE\vector_3d.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\vector_3d.h">
+      <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="INCLUDE\view.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="INCLUDE\arcball.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\view.h">
+      <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
