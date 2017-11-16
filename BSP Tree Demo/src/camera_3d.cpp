@@ -27,7 +27,7 @@ camera::camera (const point_3d &eye, const point_3d &to, real fov)							//	defa
 void	camera::Look (const point_3d &e, const point_3d &to, real fov)						//	assign the viewing parameters
 {																																								//	begin
 	eye = e;																																			//	copy the eye point_3d
-    real tanfov = TAN (DegreesToRadians (fov * R (0.5)));												//	compute the tangent of the field of view half-angle
+    real tanfov = TAN (degreesToRadians (fov * R (0.5)));												//	compute the tangent of the field of view half-angle
 	real distance = R(1.0) / tanfov;																						//	compute the distance from the eye to the view plane_3d
 	vector_3d	vpn = (eye - to).Normalize (),																			//	view is vector_3d from eye, to
 					u = (vector_3d (R(0.0), R(1.0), R(0.0)) ^ vpn).Normalize (),					//	calculate the x' axis vector_3d
@@ -43,7 +43,7 @@ void	camera::Look (const point_3d &e, const point_3d &to, real fov)						//	assi
 real	LensToFOV (int focal_length, real film_size)															//	compute the fov from a film size and lens focal length
 {																																								//	begin
 	real	fov = R(2.0) * ATAN2 (film_size * R(0.5) , real (focal_length));				//	compute the fov angle in radians
-	return RadiansToDegrees (fov);																								//	convert the fov to degrees
+	return radiansToDegrees (fov);																								//	convert the fov to degrees
 }																																								//	end
 
 //------------------------------------------------------------------------------

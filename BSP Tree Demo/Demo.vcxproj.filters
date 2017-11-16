@@ -9,9 +9,6 @@
     <ClCompile Include="src\arcball.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\BOUND_3D.CPP">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="src\bspnode_3d.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -87,12 +84,12 @@
     <ClCompile Include="src\view.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\bound_3d.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\arcball.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\BOUND_3D.H">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\bspnode_3d.h">
@@ -158,15 +155,6 @@
     <ClInclude Include="src\transform_3d.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\TUPLE_2D.H">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\TUPLE_3D.H">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\UTILITY.H">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="src\vector_2d.h">
       <Filter>src</Filter>
     </ClInclude>
@@ -174,6 +162,18 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\view.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bound_3d.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utility.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tuple_3d.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tuple_2d.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

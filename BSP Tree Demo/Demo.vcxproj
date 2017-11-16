@@ -12,7 +12,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\arcball.cpp" />
-    <ClCompile Include="src\BOUND_3D.CPP" />
+    <ClCompile Include="src\bound_3d.cpp" />
     <ClCompile Include="src\bspnode_3d.cpp" />
     <ClCompile Include="src\bsptree_3d.cpp" />
     <ClCompile Include="src\camera_3d.cpp" />
@@ -41,7 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\arcball.h" />
-    <ClInclude Include="src\BOUND_3D.H" />
+    <ClInclude Include="src\bound_3d.h" />
     <ClInclude Include="src\bspnode_3d.h" />
     <ClInclude Include="src\bsptree_3d.h" />
     <ClInclude Include="src\camera_3d.h" />
@@ -63,9 +63,9 @@
     <ClInclude Include="src\rcpolygon_3d.h" />
     <ClInclude Include="src\SPLIT.H" />
     <ClInclude Include="src\transform_3d.h" />
-    <ClInclude Include="src\TUPLE_2D.H" />
-    <ClInclude Include="src\TUPLE_3D.H" />
-    <ClInclude Include="src\UTILITY.H" />
+    <ClInclude Include="src\tuple_2d.h" />
+    <ClInclude Include="src\tuple_3d.h" />
+    <ClInclude Include="src\utility.h" />
     <ClInclude Include="src\vector_2d.h" />
     <ClInclude Include="src\vector_3d.h" />
     <ClInclude Include="src\view.h" />

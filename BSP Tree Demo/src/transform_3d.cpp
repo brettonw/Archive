@@ -16,7 +16,7 @@
 //------------------------------------------------------------------------------
 matrix_3d	RotateX (real angle)																									//	build a transformation matrix_3d
 {																																								//	begin
-	angle = DegreesToRadians (angle);																							//	convert degrees to radians
+	angle = degreesToRadians (angle);																							//	convert degrees to radians
 	real	cosine = COS (angle),																										//	compute the cosine of the angle
 				sine = SIN (angle);																											//	compute the sine of the angle
 	matrix_3d	m (matrix_3d::identity);																						//	new identity matrix_3d
@@ -32,7 +32,7 @@ matrix_3d	RotateX (real angle)																									//	build a transformation
 //------------------------------------------------------------------------------
 matrix_3d	RotateY (real angle)																									//	build a transformation matrix_3d
 {																																								//	begin
-	angle = DegreesToRadians (angle);																							//	convert degrees to radians
+	angle = degreesToRadians (angle);																							//	convert degrees to radians
 	real	cosine = COS (angle),																										//	compute the cosine of the angle
 				sine = SIN (angle);																											//	compute the sine of the angle
 	matrix_3d	m (matrix_3d::identity);																						//	new identity matrix_3d
@@ -48,7 +48,7 @@ matrix_3d	RotateY (real angle)																									//	build a transformation
 //------------------------------------------------------------------------------
 matrix_3d	RotateZ (real angle)																									//	build a transformation matrix_3d
 {																																								//	begin
-	angle = DegreesToRadians (angle);																							//	convert degrees to radians
+	angle = degreesToRadians (angle);																							//	convert degrees to radians
 	real	cosine = COS (angle),																										//	compute the cosine of the angle
 			sine = SIN (angle);																												//	compute the sine of the angle
 	matrix_3d	m (matrix_3d::identity);																						//	new identity matrix_3d
