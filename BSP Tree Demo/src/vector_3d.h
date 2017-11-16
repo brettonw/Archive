@@ -25,18 +25,18 @@ class	vector_3d : public tuple_3d																								//	4 dimensional vector
 	public:																																				//	public interface
 		vector_3d (void) {}																													//	default constructor
 		vector_3d (real x, real y, real z, real w = R(0.0));												//	constructor from 4 values
-		vector_3d (const vector_3d &v);																							//	copy constructor
-		vector_3d (const point_3d &p);																							//	constructor from a point_3d
-		vector_3d (const tuple_3d &t);																							//	constructor from a tuple_3d
-		vector_3d	&operator = (const vector_3d &v);																	//	assignment operator
-		vector_3d	&operator = (const tuple_3d &t);																	//	assignment operator
+		vector_3d (const vector_3d& v);																							//	copy constructor
+		vector_3d (const point_3d& p);																							//	constructor from a point_3d
+		vector_3d (const tuple_3d& t);																							//	constructor from a tuple_3d
+		vector_3d	&operator = (const vector_3d& v);																	//	assignment operator
+		vector_3d	&operator = (const tuple_3d& t);																	//	assignment operator
 		void			operator () (real x, real y, real z, real w = R(0.0));						//	function call operator
 		vector_3d operator * (real s) const;																				//	scalar multiplication
 		vector_3d operator / (real s) const;																				//	scalar division
-		vector_3d	operator ^ (const vector_3d &v) const;														//	cross product
-		vector_3d	operator + (const vector_3d &v) const;														//	addition operator
-		vector_3d	&operator += (const vector_3d &v);																//	self addition operator
-		vector_3d	operator - (const vector_3d &v) const;														//	subtraction operator
+		vector_3d	operator ^ (const vector_3d& v) const;														//	cross product
+		vector_3d	operator + (const vector_3d& v) const;														//	addition operator
+		vector_3d	&operator += (const vector_3d& v);																//	self addition operator
+		vector_3d	operator - (const vector_3d& v) const;														//	subtraction operator
 		vector_3d	operator - (void) const;																					//	unary minus operator
 		real			Norm (void) const;																								//	compute the length of the vector_3d
 		vector_3d	&Normalize (void);																								//	reduce the vector_3d to length 1.0

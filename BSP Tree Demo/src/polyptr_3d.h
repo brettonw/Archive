@@ -25,12 +25,12 @@ class	polyptr																																		//	reference counted polygon poin
 				polyptr (void);																													//	normal constructor
 				polyptr (point_3d *buffer, int count, ...);															//	normal constructor
 				polyptr (rcpolygon *ptr);																								//	normal constructor
-				polyptr (const polyptr &ptr);																						//	copy constructor
+				polyptr (const polyptr& ptr);																						//	copy constructor
 				~polyptr (void);																												//	destructor
 				rcpolygon	*operator -> (void) const;																		//	pointer dereference operator
 				rcpolygon	*operator () (void) const;																		//	function call operator
 				polyptr		&operator = (rcpolygon *ptr);																	//	assignment operator
-				polyptr		&operator = (const polyptr &ptr);															//	assignment operator
+				polyptr		&operator = (const polyptr& ptr);															//	assignment operator
 };																																							//	end polygon class definition
 
 //------------------------------------------------------------------------------

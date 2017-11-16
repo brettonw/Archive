@@ -13,7 +13,7 @@
 //------------------------------------------------------------------------------
 //	constructor
 //------------------------------------------------------------------------------
-iterator::iterator (const listptr &l)																						//	normal constructor
+iterator::iterator (const listptr& l)																						//	normal constructor
 {																																								//	begin
 	list = l;																																			//	copy the list pointer
 	Reset ();																																			//	start at the head of the list

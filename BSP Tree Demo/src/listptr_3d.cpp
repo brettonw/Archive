@@ -22,7 +22,7 @@ listptr::listptr (void)																													//	normal constructor
 //------------------------------------------------------------------------------
 //	constructor
 //------------------------------------------------------------------------------
-listptr::listptr (const listptr &l)																							//	normal constructor
+listptr::listptr (const listptr& l)																							//	normal constructor
 {																																								//	begin
 	list = l.list;																																//	copy the list pointer
 	list->ref_count++;																														//	increment the reference count
@@ -40,7 +40,7 @@ listptr::~listptr (void)																												//	destructor
 //------------------------------------------------------------------------------
 //	assignment
 //------------------------------------------------------------------------------
-listptr		&listptr::operator = (const listptr &l)																//	assignment operator
+listptr		&listptr::operator = (const listptr& l)																//	assignment operator
 {																																								//	begin
 	l.list->ref_count++;																													//	increment the reference count for the other list
 	if (--list->ref_count == 0)																										//	decrement the reference count, if it is 0

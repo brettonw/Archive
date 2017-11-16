@@ -19,18 +19,18 @@ class	plane_3d : public tuple_3d, public object_3d 															//	3 dimension
 {																																								//	begin plane_3d class definition
 	public:																																				//	public interface
 				plane_3d (void) {}																											//	default constructor
-				plane_3d (const vector_3d &v, const point_3d &p);												//	normal constructor
-				plane_3d (const point_3d &a, const point_3d &b, const point_3d &c);			//	normal constructor
+				plane_3d (const vector_3d& v, const point_3d& p);												//	normal constructor
+				plane_3d (const point_3d& a, const point_3d& b, const point_3d& c);			//	normal constructor
 				plane_3d (real a, real b, real c, real d);															//	component constructor
-				plane_3d (const plane_3d &p);																						//	copy constructor
-				plane_3d (const tuple_3d &t);																						//	constructor from a tuple_3d
+				plane_3d (const plane_3d& p);																						//	copy constructor
+				plane_3d (const tuple_3d& t);																						//	constructor from a tuple_3d
 virtual	~plane_3d	(void);																												//	destructor
-				plane_3d	&operator = (const plane_3d &p);															//	assignment operator
-				plane_3d	&operator = (const tuple_3d &t);															//	assignment operator
-				void			Define (const vector_3d &v, const point_3d &p);								//	compute the plane_3d equation
-				void			Define (const point_3d &a, const point_3d &b, const point_3d &c);//	compute the plane_3d equation
+				plane_3d	&operator = (const plane_3d& p);															//	assignment operator
+				plane_3d	&operator = (const tuple_3d& t);															//	assignment operator
+				void			Define (const vector_3d& v, const point_3d& p);								//	compute the plane_3d equation
+				void			Define (const point_3d& a, const point_3d& b, const point_3d& c);//	compute the plane_3d equation
 				void			Invert (void);																								//	invert the values of the plane_3d equation
-virtual	real			RayIntersection (const ray &r) const;													//	return the distance along the ray at which the intersection occurs
+virtual	real			RayIntersection (const ray& r) const;													//	return the distance along the ray at which the intersection occurs
 };																																							//	end plane_3d class definition
 
 //------------------------------------------------------------------------------

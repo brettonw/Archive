@@ -22,9 +22,9 @@ class	listptr																																		//	polygon list pointer class
 				polylist	*list;																												//	the pointer to the list
 	public:																																				//	members available externally
 				listptr (void);																													//	normal constructor
-				listptr (const listptr &list);																					//	normal constructor
+				listptr (const listptr& list);																					//	normal constructor
 				~listptr (void);																												//	destructor
-				listptr		&operator = (const listptr &list);														//	assignment operator
+				listptr		&operator = (const listptr& list);														//	assignment operator
 				polylist	*operator -> (void) const;																		//	pointer dereference operator
 };																																							//	end polygon class definition
 

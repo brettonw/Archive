@@ -14,7 +14,7 @@ inline real sgn (real v) {
 }
 
 inline bool odd (int v) {
-    return bool (v & 1);
+    return bool (v&  1);
 }
 
 inline real fract (real v) {

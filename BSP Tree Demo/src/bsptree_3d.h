@@ -1,27 +1,24 @@
 #include	"split.h"
 #include	"listptr_3d.h"
 
-#ifndef     _COUNTED_OBJECT_H_
-#include    "counted_object.h"
-#endif  //  _COUNTED_OBJECT_H_
+#ifndef     _PTR_TO_H_
+#include    "ptr_to.h"
+#endif  //  _PTR_TO_H_
 
 #ifndef BSPTREE
 #define BSPTREE
 
-class	BspNode;
-class	BspTree : public CountedObject {
-protected:
-    BspNode	*node;
+MAKE_PTR_TO (BspNode);
 
-public:
-    BspTree (void);
-    ~BspTree (void);
+class	BspTree : public PtrToBspNode {
+
+    public:
     void		insert (listptr list, hclass keep, hclass cur);
     void		push (polyptr poly, listptr result, hclass keep, hclass cur);
     void		push (listptr list, listptr result, hclass keep, hclass cur);
     void		reduce (void);
-    void		draw (const point_3d	&eye) const;
-    bool		rayIntersection (const ray &r, polyptr &poly_hit, point_3d &ipt) const;
+    void		draw (const point_3d& eye) const;
+    bool		rayIntersection (const ray& r, polyptr& poly_hit, point_3d& ipt) const;
 };
 
 extern BspTree* gWorld;

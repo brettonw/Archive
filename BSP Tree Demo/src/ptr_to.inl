@@ -17,7 +17,7 @@ void    addRefToPtr (CountedObject* ptr) {
 
 inline
 void    removeRefFromPtr (CountedObject* ptr) {
-    if (ptr and (ptr->RemoveRef () == 0))
+    if (ptr and (ptr->removeRef () == 0))
         delete ptr;
 }
 
@@ -43,7 +43,7 @@ PtrTo<aType>::PtrTo (const PtrTo<aType>& ptr) :
 template <class aType>
 /* void */
 PtrTo<aType>::~PtrTo (void) {
-    removeRefFromPtr (ptr);
+    removeRefFromPtr (reinterpret_cast<CountedObject*> (ptr));
 }
 
 template <class aType>

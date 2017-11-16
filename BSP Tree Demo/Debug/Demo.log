@@ -1,1 +1,9 @@
-﻿  Demo.vcxproj -> C:\Users\wadeb\work\brettonw\archive\BSP Tree Demo\.\Debug\Demo.exe
+﻿  view.cpp
+  initapp.cpp
+  Generating Code...
+  Compiling...
+  bsptree_3d.cpp
+  bspnode_3d.cpp
+  Generating Code...
+arcball.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+  Demo.vcxproj -> C:\Users\wadeb\work\brettonw\archive\BSP Tree Demo\.\Debug\Demo.exe

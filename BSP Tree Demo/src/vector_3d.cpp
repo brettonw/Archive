@@ -26,21 +26,21 @@ vector_3d::vector_3d (real x, real y, real z, real w) : tuple_3d (x, y, z, w)		/
 //------------------------------------------------------------------------------
 //	constructor
 //------------------------------------------------------------------------------
-vector_3d::vector_3d (const vector_3d &v) : tuple_3d (v)												//	copy constructor
+vector_3d::vector_3d (const vector_3d& v) : tuple_3d (v)												//	copy constructor
 {																																								//	begin
 }																																								//	end
 
 //------------------------------------------------------------------------------
 //	constructor
 //------------------------------------------------------------------------------
-vector_3d::vector_3d (const point_3d &p) : tuple_3d (p[X], p[Y], p[Z], R(0.0))	//	constructor from a point_3d
+vector_3d::vector_3d (const point_3d& p) : tuple_3d (p[X], p[Y], p[Z], R(0.0))	//	constructor from a point_3d
 {																																								//	begin
 }																																								//	end
 
 //------------------------------------------------------------------------------
 //	constructor
 //------------------------------------------------------------------------------
-vector_3d::vector_3d (const tuple_3d &t)																				//	constructor from a tuple_3d
+vector_3d::vector_3d (const tuple_3d& t)																				//	constructor from a tuple_3d
 {																																								//	begin
 	xyz[X] = t[X]; xyz[Y] = t[Y]; xyz[Z] = t[Z]; xyz[W] = R(0.0);									//	copy the values into the tuple_3d
 }																																								//	end
@@ -48,7 +48,7 @@ vector_3d::vector_3d (const tuple_3d &t)																				//	constructor from 
 //------------------------------------------------------------------------------
 //	assignment
 //------------------------------------------------------------------------------
-vector_3d	&vector_3d::operator = (const vector_3d &v)														//	assignment operator
+vector_3d	&vector_3d::operator = (const vector_3d& v)														//	assignment operator
 {																																								//	begin
 	tuple_3d::operator () (v[X], v[Y], v[Z], v[W]);																//	copy the values
 	return *this;																																	//	return the reference to this
@@ -57,7 +57,7 @@ vector_3d	&vector_3d::operator = (const vector_3d &v)														//	assignment
 //------------------------------------------------------------------------------
 //	assignment
 //------------------------------------------------------------------------------
-vector_3d	&vector_3d::operator = (const tuple_3d &t)														//	assignment operator
+vector_3d	&vector_3d::operator = (const tuple_3d& t)														//	assignment operator
 {																																								//	begin
 	tuple_3d::operator () (t[X], t[Y], t[Z], R(0.0));															//	copy the values
 	return *this;																																	//	return the reference to this
@@ -90,7 +90,7 @@ vector_3d 	vector_3d::operator / (real s) const																//	scalar divisio
 //------------------------------------------------------------------------------
 //	cross product
 //------------------------------------------------------------------------------
-vector_3d	vector_3d::operator ^ (const vector_3d &v) const											//	cross product
+vector_3d	vector_3d::operator ^ (const vector_3d& v) const											//	cross product
 {																																								//	begin
 	return vector_3d (	(xyz[Y] * v[Z]) - (xyz[Z] * v[Y]), 												//	return a vector_3d, x coordinate
 									(xyz[Z] * v[X]) - (xyz[X] * v[Z]),														//	y coordinate
@@ -100,7 +100,7 @@ vector_3d	vector_3d::operator ^ (const vector_3d &v) const											//	cross pr
 //------------------------------------------------------------------------------
 //	addition
 //------------------------------------------------------------------------------
-vector_3d	vector_3d::operator + (const vector_3d &v) const											//	addition operator
+vector_3d	vector_3d::operator + (const vector_3d& v) const											//	addition operator
 {																																								//	begin
 	return vector_3d (	xyz[X] + v[X], 																						//	return a vector_3d, x coordinate
 									xyz[Y] + v[Y],																								//	y coordinate
@@ -110,7 +110,7 @@ vector_3d	vector_3d::operator + (const vector_3d &v) const											//	addition
 //------------------------------------------------------------------------------
 //	self addition
 //------------------------------------------------------------------------------
-vector_3d	&vector_3d::operator += (const vector_3d &v)													//	self addition operator
+vector_3d	&vector_3d::operator += (const vector_3d& v)													//	self addition operator
 {																																								//	begin
 	xyz[X] += v[X]; 																															//	x coordinate
 	xyz[Y] += v[Y];																																//	y coordinate
@@ -121,7 +121,7 @@ vector_3d	&vector_3d::operator += (const vector_3d &v)													//	self addit
 //------------------------------------------------------------------------------
 //	subtraction
 //------------------------------------------------------------------------------
-vector_3d	vector_3d::operator - (const vector_3d &v) const											//	subtraction operator
+vector_3d	vector_3d::operator - (const vector_3d& v) const											//	subtraction operator
 {																																								//	begin
 	return vector_3d (	xyz[X] - v[X], 																						//	return a vector_3d, x coordinate
 									xyz[Y] - v[Y],																								//	y coordinate

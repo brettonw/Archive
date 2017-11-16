@@ -15,7 +15,7 @@ View::View (HWND wind) :
     eye = cam.Eye ();
     window = wind;
 
-    GetClientRect (window, &clientRect);
+    GetClientRect (window,& clientRect);
     createOffscreen ();
 
     ysize = (clientRect.bottom - clientRect.top) * R (0.5);
@@ -46,7 +46,7 @@ void View::createOffscreen () {
     bitMapInfo.bmiHeader.biClrUsed = 0;
     bitMapInfo.bmiHeader.biClrImportant = 0;
 
-    offscreenBitmap = CreateDIBSection (offscreenDC, &bitMapInfo, DIB_RGB_COLORS, &pixels, 0, 0);
+    offscreenBitmap = CreateDIBSection (offscreenDC,& bitMapInfo, DIB_RGB_COLORS,& pixels, 0, 0);
     oldOffscreenBitmap = static_cast<HBITMAP> (SelectObject (offscreenDC, offscreenBitmap));
     ReleaseDC (window, screenDC);
 }
@@ -55,26 +55,26 @@ void View::eraseOffscreen () {
     COLORREF color = RGB (255, 255, 255);
     HBRUSH brush = CreateSolidBrush (color);
     RECT rt;
-    GetClientRect (window, &rt);
-    FillRect (offscreenDC, &rt, brush);
+    GetClientRect (window,& rt);
+    FillRect (offscreenDC,& rt, brush);
     DeleteObject (brush);
 }
 
 void View::swapOffscreen () {
     PAINTSTRUCT ps;
-    HDC hdc = BeginPaint (window, &ps);
+    HDC hdc = BeginPaint (window,& ps);
     BitBlt (hdc, 0, 0, clientRect.right, clientRect.bottom, offscreenDC, 0, 0, SRCCOPY);
     //SetStretchBltMode (hdc, HALFTONE);
     //StretchBlt (hdc, 0, 0, clientRect.right, clientRect.bottom, offscreenDC, 0, 0, clientRect.right * 2, clientRect.bottom * 2, SRCCOPY);
-    EndPaint (window, &ps);
+    EndPaint (window,& ps);
 }
 
-void View::moveToPt (const point_2d &vp) const {
+void View::moveToPt (const point_2d& vp) const {
     POINT p = vdcToDc (vp);
     moveTo (p.x, p.y);
 }
 
-void View::drawLineToPt (const point_2d &vp, COLORREF strokeColor) const {
+void View::drawLineToPt (const point_2d& vp, COLORREF strokeColor) const {
     HPEN	pen = CreatePen (PS_SOLID, 0, strokeColor);															//	make a pen for the arc
     HGDIOBJ	oldpen = SelectObject (offscreenDC, pen);																			//	select the pen
 
@@ -85,7 +85,7 @@ void View::drawLineToPt (const point_2d &vp, COLORREF strokeColor) const {
     DeleteObject (pen);																														//	free up the pen
 }
 
-void View::drawCircle (const point_2d &a, const point_2d &b, COLORREF strokeColor, COLORREF fillColor) const {
+void View::drawCircle (const point_2d& a, const point_2d& b, COLORREF strokeColor, COLORREF fillColor) const {
     HPEN pen = CreatePen (PS_SOLID, 0, strokeColor);														//	make a pen for the polygon outlines
     HBRUSH brush = CreateSolidBrush (fillColor);																//	make a brush for the polygon fill
     HGDIOBJ oldpen = SelectObject (offscreenDC, pen);																			//	select the pen
@@ -101,7 +101,7 @@ void View::drawCircle (const point_2d &a, const point_2d &b, COLORREF strokeColo
     DeleteObject (brush);																													//	free up the pen
 }
 
-void View::drawCrossHair (const point_2d &vp, COLORREF strokeColor) const {
+void View::drawCrossHair (const point_2d& vp, COLORREF strokeColor) const {
     HPEN pen = CreatePen (PS_SOLID, 0, strokeColor);																		//	make a pen for the crosshair
     HGDIOBJ oldpen = SelectObject (offscreenDC, pen);																							//	select the pen
 
@@ -172,11 +172,11 @@ void View::handleDrag (POINT where) {
     gui->drawForeground ();
 }
 
-point_2d View::dcToVdc (const POINT &p) const {
+point_2d View::dcToVdc (const POINT& p) const {
     return point_2d ((p.x - xsize) / aspect, (p.y - ysize) / -aspect);
 }
 
-POINT View::vdcToDc (const point_2d &p) const {
+POINT View::vdcToDc (const point_2d& p) const {
     POINT pt;
     pt.x = (short) ((p[X] * aspect) + xsize);
     pt.y = (short) ((p[Y] * -aspect) + ysize);

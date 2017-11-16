@@ -13,8 +13,8 @@ class View
 {
 private:
 	// map screen coordinates (dc) to virtual device coordinates (vdc) and back
-	point_2d dcToVdc(const POINT &p) const;
-	POINT vdcToDc(const point_2d &p) const;
+	point_2d dcToVdc(const POINT& p) const;
+	POINT vdcToDc(const point_2d& p) const;
 
 	// methods for dealing with the offscreen buffer
 	void createOffscreen();
@@ -42,10 +42,10 @@ protected:
 public:
 	View(HWND window);
 	~View(void);
-	void moveToPt(const point_2d &pt) const;
-	void drawLineToPt(const point_2d &pt, COLORREF strokeColor) const;
-	void drawCircle(const point_2d &a, const point_2d &b, COLORREF strokeColor, COLORREF fillColor) const;
-	void drawCrossHair(const point_2d &p, COLORREF strokeColor) const;
+	void moveToPt(const point_2d& pt) const;
+	void drawLineToPt(const point_2d& pt, COLORREF strokeColor) const;
+	void drawCircle(const point_2d& a, const point_2d& b, COLORREF strokeColor, COLORREF fillColor) const;
+	void drawCrossHair(const point_2d& p, COLORREF strokeColor) const;
     void drawPolygon (polyptr poly, COLORREF strokeColor, COLORREF fillColor);
     void drawPolygon (polyptr poly);
     void drawScene(void);

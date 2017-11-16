@@ -3,17 +3,17 @@
 #include "quaternion_3d.h"
 #include "view.h"
 
-Arcball::Arcball (const point_2d &cent, real rad) {
+Arcball::Arcball (const point_2d& cent, real rad) {
     center = Vector_2d (cent);
     radius = rad;
 }
 
-void	Arcball::click (const point_2d &pt) {
+void	Arcball::click (const point_2d& pt) {
     start_vec = mapToSphere (pt - center);
     start_pt = point_2d (start_vec[X], start_vec[Y]) + center;
 }
 
-matrix_3d	Arcball::drag (const point_2d &pt) {
+matrix_3d	Arcball::drag (const point_2d& pt) {
     end_vec = mapToSphere (pt - center);
     end_pt = point_2d (end_vec[X], end_vec[Y]) + center;
     return Quaternion (start_vec, end_vec);
@@ -31,7 +31,7 @@ void	Arcball::drawForeground (void) const {
     gView->drawCrossHair (start_pt, 0x00ffffff);
 }
 
-void	Arcball::computeArc (short segs, const vector_3d &a, const vector_3d &b) const {
+void	Arcball::computeArc (short segs, const vector_3d& a, const vector_3d& b) const {
     if (segs) {
         vector_3d bisector = (a + b).Normalize () * radius;
         computeArc (segs - 1, a, bisector);
@@ -45,7 +45,7 @@ void	Arcball::drawArc (short numsegs) const {
     computeArc (numsegs, start_vec, end_vec);
 }
 
-vector_3d	Arcball::mapToSphere (const point_2d &pt) {
+vector_3d	Arcball::mapToSphere (const point_2d& pt) {
     real r = (pt[X] * pt[X]) + (pt[Y] * pt[Y]);
     real radsq = radius * radius;
     if (r > radsq) {

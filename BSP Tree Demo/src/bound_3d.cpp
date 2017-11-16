@@ -22,7 +22,7 @@ bound_3d::bound_3d (void)																												//	constructor
 //------------------------------------------------------------------------------
 //	self addition
 //------------------------------------------------------------------------------
-void		bound_3d::operator += (const bound_3d &box)															//	add a bounding box into this one
+void		bound_3d::operator += (const bound_3d& box)															//	add a bounding box into this one
 {																																								//	begin
 	if (box.max[X] > max[X]) max[X] = box.max[X] + EPSILON;												//	compare the coordinate value, and replace if the magintude is appropriate
 	if (box.max[Y] > max[Y]) max[Y] = box.max[Y] + EPSILON;												//	compare the coordinate value, and replace if the magintude is appropriate
@@ -35,7 +35,7 @@ void		bound_3d::operator += (const bound_3d &box)															//	add a boundin
 //------------------------------------------------------------------------------
 //	self addition
 //------------------------------------------------------------------------------
-void		bound_3d::operator += (const point_3d &pt)															//	add a point_3d into the bounding box
+void		bound_3d::operator += (const point_3d& pt)															//	add a point_3d into the bounding box
 {																																								//	begin
 	if (pt[X] > max[X]) max[X] = pt[X] + EPSILON;																	//	compare the coordinate value, and replace if the magintude is appropriate
 	if (pt[Y] > max[Y]) max[Y] = pt[Y] + EPSILON;																	//	compare the coordinate value, and replace if the magintude is appropriate
@@ -48,11 +48,11 @@ void		bound_3d::operator += (const point_3d &pt)															//	add a point_3d
 //------------------------------------------------------------------------------
 //	containment test
 //------------------------------------------------------------------------------
-bool		bound_3d::Contains (const point_3d &pt) const														//	return whether or not a point_3d is inside the bounding box
+bool		bound_3d::Contains (const point_3d& pt) const														//	return whether or not a point_3d is inside the bounding box
 {																																								//	begin
-	return	bool ((pt[X] <= max[X]) && (pt[X] >= min[X]) &&												//	if the x component is in
-								(pt[Y] <= max[Y]) && (pt[Y] >= min[Y]) &&												//	and the y component is on
-								(pt[Z] <= max[Z]) && (pt[Z] >= min[Z]));												//	and the z component is in...
+	return	bool ((pt[X] <= max[X]) and (pt[X] >= min[X]) and												//	if the x component is in
+								(pt[Y] <= max[Y]) and (pt[Y] >= min[Y]) and												//	and the y component is on
+								(pt[Z] <= max[Z]) and (pt[Z] >= min[Z]));												//	and the z component is in...
 }																																								//	end
 
 //------------------------------------------------------------------------------

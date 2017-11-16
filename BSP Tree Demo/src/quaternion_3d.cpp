@@ -38,7 +38,7 @@ matrix_3d	QuaternionMatrix (real x, real y, real z, real w)											//	build a
 //------------------------------------------------------------------------------
 //	make a quaternion from two vectors, and return the resulting matrix_3d
 //------------------------------------------------------------------------------
-matrix_3d	Quaternion (const vector_3d &begin, const vector_3d &end)							//	map a quaternion to a transformation matrix_3d
+matrix_3d	Quaternion (const vector_3d& begin, const vector_3d& end)							//	map a quaternion to a transformation matrix_3d
 {																																								//	begin
 	real		w = begin | end;																											//	the quaternion values, w is cosine (theta / 2), where theta is rotation angle
 	vector_3d	perp = begin ^ end;																									//	compute the vector_3d perpendicular to the begin and end vectors

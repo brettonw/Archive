@@ -16,7 +16,7 @@
 //------------------------------------------------------------------------------
 //	functions
 //------------------------------------------------------------------------------
-matrix_3d	Quaternion (const vector_3d &begin, const vector_3d &end);						//	function to map a quaternion to a transformation matrix_3d
+matrix_3d	Quaternion (const vector_3d& begin, const vector_3d& end);						//	function to map a quaternion to a transformation matrix_3d
 
 //------------------------------------------------------------------------------
 

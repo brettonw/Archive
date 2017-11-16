@@ -24,7 +24,7 @@ matrix_3d	IDENTITY_MATRIX (matrix_3d::identity);																//	an identity m
 //------------------------------------------------------------------------------
 //	constructor
 //------------------------------------------------------------------------------
-matrix_3d::matrix_3d (const matrix_3d &m)																				//	copy constructor
+matrix_3d::matrix_3d (const matrix_3d& m)																				//	copy constructor
 {																																								//	begin
 	for (short i = 0; i < 4; i++)																									//	loop on the rows
 		for (short j = 0; j < 4; j++)																								//	loop on the columns
@@ -44,7 +44,7 @@ matrix_3d::matrix_3d (real f[4][4])																							//	direct assignment c
 //------------------------------------------------------------------------------
 //	assignment
 //------------------------------------------------------------------------------
-void	matrix_3d::operator = (const matrix_3d &m)																//	assignment operator
+void	matrix_3d::operator = (const matrix_3d& m)																//	assignment operator
 {																																								//	begin
 	for (short i = 0; i < 4; i++)																									//	loop on the rows
 		for (short j = 0; j < 4; j++)																								//	loop on the columns
@@ -54,7 +54,7 @@ void	matrix_3d::operator = (const matrix_3d &m)																//	assignment ope
 //------------------------------------------------------------------------------
 //	multiplication
 //------------------------------------------------------------------------------
-matrix_3d	matrix_3d::operator * (const matrix_3d &m) const											//	multiplication operator
+matrix_3d	matrix_3d::operator * (const matrix_3d& m) const											//	multiplication operator
 {																																								//	begin
 	matrix_3d result;																															//	a new matrix_3d
 	for (short i = 0; i < 4; i++)																									//	loop on the rows
@@ -122,7 +122,7 @@ matrix_3d	matrix_3d::Inverse (void) const																				//	compute the matr
 //------------------------------------------------------------------------------
 //	pre-multiplication by a tuple_3d
 //------------------------------------------------------------------------------
-tuple_3d	operator * (const tuple_3d &t, const matrix_3d &m)										//	multiplication operator
+tuple_3d	operator * (const tuple_3d& t, const matrix_3d& m)										//	multiplication operator
 {																																								//	begin
 	tuple_3d	c0 (m(0, 0), m(1, 0), m(2, 0), m(3, 0)),														//	build the vector_3d for the first column
 				c1 (m(0, 1), m(1, 1), m(2, 1), m(3, 1)),																//	build the vector_3d for the second column
@@ -134,7 +134,7 @@ tuple_3d	operator * (const tuple_3d &t, const matrix_3d &m)										//	multipli
 //------------------------------------------------------------------------------
 //	post-multiplication by a tuple_3d
 //------------------------------------------------------------------------------
-tuple_3d	operator * (const matrix_3d &m, const tuple_3d &t)										//	multiplication operator
+tuple_3d	operator * (const matrix_3d& m, const tuple_3d& t)										//	multiplication operator
 {																																								//	begin
 	tuple_3d	r0 (m(0, 0), m(0, 1), m(0, 2), m(0, 3)),														//	build the vector_3d for the first column
 				r1 (m(1, 0), m(1, 1), m(1, 2), m(1, 3)),																//	build the vector_3d for the second column

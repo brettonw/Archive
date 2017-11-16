@@ -8,13 +8,13 @@ class Tuple_2d {
     real xy[2];
     public:
     Tuple_2d (void) {}
-    Tuple_2d (const Tuple_2d &t);
+    Tuple_2d (const Tuple_2d& t);
     Tuple_2d (real x, real y);
-    void operator = (const Tuple_2d &t);
-    bool operator == (const Tuple_2d &t) const;
-    bool operator != (const Tuple_2d &t) const;
+    void operator = (const Tuple_2d& t);
+    bool operator == (const Tuple_2d& t) const;
+    bool operator != (const Tuple_2d& t) const;
     void operator () (real x, real y);
-    real operator | (const Tuple_2d &t) const;
+    real operator | (const Tuple_2d& t) const;
     real operator [] (coord c) const;
     real& operator [] (coord c);
 };

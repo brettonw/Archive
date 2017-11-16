@@ -14,7 +14,7 @@
 //------------------------------------------------------------------------------
 //	constructor
 //------------------------------------------------------------------------------
-tuple_3d::tuple_3d (const tuple_3d &t)																					//	copy constructor
+tuple_3d::tuple_3d (const tuple_3d& t)																					//	copy constructor
 {																																								//	begin
 	xyz[X] = t[X]; xyz[Y] = t[Y]; xyz[Z] = t[Z]; xyz[W] = t[W];										//	copy the values into the tuple_3d
 }																																								//	end
@@ -30,7 +30,7 @@ tuple_3d::tuple_3d (real x, real y, real z, real w)															//	constructor
 //------------------------------------------------------------------------------
 //	assignment operator
 //------------------------------------------------------------------------------
-void	tuple_3d::operator = (const tuple_3d &t)																	//	assignment operator
+void	tuple_3d::operator = (const tuple_3d& t)																	//	assignment operator
 {																																								//	begin
 	xyz[X] = t[X]; xyz[Y] = t[Y]; xyz[Z] = t[Z]; xyz[W] = t[W];										//	copy the values into the tuple_3d
 }																																								//	end
@@ -38,22 +38,22 @@ void	tuple_3d::operator = (const tuple_3d &t)																	//	assignment oper
 //------------------------------------------------------------------------------
 //	equality test
 //------------------------------------------------------------------------------
-bool	tuple_3d::operator == (const tuple_3d &t) const														//	equality operator
+bool	tuple_3d::operator == (const tuple_3d& t) const														//	equality operator
 {																																								//	begin
-	return	bool ((FABS (xyz[X] - t[X]) < EPSILON) && 															//	compare the x coordinates
-								(FABS (xyz[Y] - t[Y]) < EPSILON) &&															//	compare the y coordinates
-								(FABS (xyz[Z] - t[Z]) < EPSILON) && 															//	compare the z coordinates
+	return	bool ((FABS (xyz[X] - t[X]) < EPSILON) and 															//	compare the x coordinates
+								(FABS (xyz[Y] - t[Y]) < EPSILON) and															//	compare the y coordinates
+								(FABS (xyz[Z] - t[Z]) < EPSILON) and 															//	compare the z coordinates
 								(FABS (xyz[W] - t[W]) < EPSILON));																//	compare the w coordinates			
 }																																								//	end
 
 //------------------------------------------------------------------------------
 //	inequality test
 //------------------------------------------------------------------------------
-bool	tuple_3d::operator != (const tuple_3d &t) const														//	inequality operator
+bool	tuple_3d::operator != (const tuple_3d& t) const														//	inequality operator
 {																																								//	begin
-	return	bool ((FABS (xyz[X] - t[X]) > EPSILON) || 															//	compare the x coordinates
-								(FABS (xyz[Y] - t[Y]) > EPSILON) ||															//	compare the y coordinates
-								(FABS (xyz[Z] - t[Z]) > EPSILON) || 															//	compare the z coordinates
+	return	bool ((FABS (xyz[X] - t[X]) > EPSILON) or 															//	compare the x coordinates
+								(FABS (xyz[Y] - t[Y]) > EPSILON) or															//	compare the y coordinates
+								(FABS (xyz[Z] - t[Z]) > EPSILON) or 															//	compare the z coordinates
 								(FABS (xyz[W] - t[W]) > EPSILON));																//	compare the w coordinates			
 }																																								//	end
 
@@ -68,7 +68,7 @@ void	tuple_3d::operator () (real x, real y, real z, real w)										//	function
 //------------------------------------------------------------------------------
 //	dot product
 //------------------------------------------------------------------------------
-real	tuple_3d::operator | (const tuple_3d &t) const														//	inner product operator
+real	tuple_3d::operator | (const tuple_3d& t) const														//	inner product operator
 {																																								//	begin
 	return 	(xyz[X] * t[X]) + 																										//	return a scalar, x coordinate multiply
 					(xyz[Y] * t[Y]) +																											//	y coordinate multiply

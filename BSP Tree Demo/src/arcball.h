@@ -10,7 +10,7 @@ class	Arcball {
 private:
     void computeArc (short, const vector_3d&, const vector_3d&) const;
     void drawArc (short numsegs) const;
-    vector_3d mapToSphere (const point_2d &pt);
+    vector_3d mapToSphere (const point_2d& pt);
 
 protected:
     Vector_2d center;

@@ -14,7 +14,7 @@
 //------------------------------------------------------------------------------
 //	plane the polygon with a plane_3d
 //------------------------------------------------------------------------------
-hclass	Split (const polyptr &poly, const plane_3d &plane, polyptr &in, polyptr &out)//	split the polygon with a plane_3d
+hclass	Split (const polyptr& poly, const plane_3d& plane, polyptr& in, polyptr& out)//	split the polygon with a plane_3d
 {																																								//	begin
 	static	point_3d	outpts[64],																									//	an array of points for the out polygon
 										inpts[64];																									//	an array of points for the in polygon

@@ -16,7 +16,7 @@
 //------------------------------------------------------------------------------
 //	constructor
 //------------------------------------------------------------------------------
-camera::camera (const point_3d &eye, const point_3d &to, real fov)							//	default constructor
+camera::camera (const point_3d& eye, const point_3d& to, real fov)							//	default constructor
 {																																								//	begin
 	Look (eye, to, fov);																													//	set the camera view as requested
 }																																								//	end
@@ -24,7 +24,7 @@ camera::camera (const point_3d &eye, const point_3d &to, real fov)							//	defa
 //------------------------------------------------------------------------------
 //	Set the camera location and viewing direction
 //------------------------------------------------------------------------------
-void	camera::Look (const point_3d &e, const point_3d &to, real fov)						//	assign the viewing parameters
+void	camera::Look (const point_3d& e, const point_3d& to, real fov)						//	assign the viewing parameters
 {																																								//	begin
 	eye = e;																																			//	copy the eye point_3d
     real tanfov = TAN (degreesToRadians (fov * R (0.5)));												//	compute the tangent of the field of view half-angle

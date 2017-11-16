@@ -23,9 +23,9 @@ class	bound_3d																																	//	bounding box class
 									min;																													//	the maximum bound point_3d
 	public:																																				//	members available externally
 				bound_3d (void);																												//	constructor
-				void			operator += (const bound_3d &box);														//	add a bounding box into this one
-				void			operator += (const point_3d &pt);															//	add a point_3d into the bounding box
-				bool			Contains (const point_3d &pt) const;													//	return whether or not a point_3d is inside the bounding box
+				void			operator += (const bound_3d& box);														//	add a bounding box into this one
+				void			operator += (const point_3d& pt);															//	add a point_3d into the bounding box
+				bool			Contains (const point_3d& pt) const;													//	return whether or not a point_3d is inside the bounding box
 };																																							//	end
 
 //------------------------------------------------------------------------------

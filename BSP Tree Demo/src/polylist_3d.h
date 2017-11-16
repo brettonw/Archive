@@ -33,8 +33,8 @@ class	polylist																																	//	polygon list class
 				polylist (void);																												//	normal constructor
 				~polylist (void);																												//	destructor
 	public:																																				//	members available externally
-				void			AddToList (const polyptr &poly);															//	add a polygon to the list
-				void			Append (listptr &list);																				//	append the contents of list to this list
+				void			AddToList (const polyptr& poly);															//	add a polygon to the list
+				void			Append (listptr& list);																				//	append the contents of list to this list
 				polyptr		Pop (void);																										//	pop the head from the list
 				bool			Empty (void) const;																						//	return whether or not the list is empty
 				void			draw (void) const;																						//	draw the polygons in the list

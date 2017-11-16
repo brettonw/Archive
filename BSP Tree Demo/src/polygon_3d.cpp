@@ -63,7 +63,7 @@ vector_3d	polygon::Normal (void) const																					//	compute the plane_
 //------------------------------------------------------------------------------
 //	check polygon for containment of a coplanar point_3d
 //------------------------------------------------------------------------------
-bool	polygon::Contains (const point_3d &pt) const															//	test the point_3d to see if it is inside the polygon
+bool	polygon::Contains (const point_3d& pt) const															//	test the point_3d to see if it is inside the polygon
 {																																								//	begin
 	//	based on code by Eric Haines from Graphics Gems IV
 	coord	x, y;																																		//	indexing values
@@ -74,7 +74,7 @@ bool	polygon::Contains (const point_3d &pt) const															//	test the poin
 		case Z:	x = X; y = Y; break;																								//	throw away the z coordinate
 	}																																							//	end
 	real	tx = pt[x], ty = pt[y];																									//	temporary values
-	point_3d	*p1 = &points[count - 1], *p2 = points;															//	pointers to the points composing the edge being tested
+	point_3d	*p1 =& points[count - 1], *p2 = points;															//	pointers to the points composing the edge being tested
 	int		yflag0 = ((*p1)[y] >= ty),																							//	check to see which side of the test point_3d the first point_3d is on
 				inside = FALSE;																													//	start with inside false
   for (int i = count; i--;)																											//	loop over all of the points
@@ -118,7 +118,7 @@ void	polygon::Invert (void)																										//	completely reverse the o
 //------------------------------------------------------------------------------
 //	compute the distance at which the ray intersects the polygon
 //------------------------------------------------------------------------------
-real		polygon::RayIntersection (const ray &r) const														//	return the distance along the ray at which the intersection occurs
+real		polygon::RayIntersection (const ray& r) const														//	return the distance along the ray at which the intersection occurs
 {																																								//	begin
 	return	plane.RayIntersection (r);																						//	return the distance along the ray to the plane_3d
 }																																								//	end

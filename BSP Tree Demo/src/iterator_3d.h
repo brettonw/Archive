@@ -22,7 +22,7 @@ class	iterator																																	//	polygon list iterator class
 				listptr	list;																														//	pointer to the list in use
 				polylist::node	*current;																								//	pointer to the node the iterator is examining
 	public:																																				//	members available externally
-				iterator (const listptr &list);																					//	normal constructor
+				iterator (const listptr& list);																					//	normal constructor
 				~iterator (void);																												//	destructor
 				polyptr	operator () (void);																							//	function call operator
 				void		Reset (void);																										//	start at the head of the list

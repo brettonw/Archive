@@ -30,21 +30,21 @@ point_3d::point_3d (real x, real y, real z, real w) : tuple_3d (x, y, z, w)			//
 //------------------------------------------------------------------------------
 //	constructor
 //------------------------------------------------------------------------------
-point_3d::point_3d (const point_3d &p) : tuple_3d (p)														//	copy constructor
+point_3d::point_3d (const point_3d& p) : tuple_3d (p)														//	copy constructor
 {																																								//	begin
 }																																								//	end
 
 //------------------------------------------------------------------------------
 //	constructor
 //------------------------------------------------------------------------------
-point_3d::point_3d (const vector_3d &v) : tuple_3d (v[X], v[Y], v[Z], R(1.0))		//	constructor from a vector_3d
+point_3d::point_3d (const vector_3d& v) : tuple_3d (v[X], v[Y], v[Z], R(1.0))		//	constructor from a vector_3d
 {																																								//	begin
 }																																								//	end
 
 //------------------------------------------------------------------------------
 //	constructor
 //------------------------------------------------------------------------------
-point_3d::point_3d (const tuple_3d &t)																					//	constructor from a tuple_3d
+point_3d::point_3d (const tuple_3d& t)																					//	constructor from a tuple_3d
 {																																								//	begin
 	real	w = t[W];																																//	get the homogenous coordinate
 	if (w != R(1.0))																															//	if the homogenous ccordinate needs to be divided
@@ -62,7 +62,7 @@ point_3d::point_3d (const tuple_3d &t)																					//	constructor from a
 //------------------------------------------------------------------------------
 //	assignment
 //------------------------------------------------------------------------------
-point_3d	&point_3d::operator = (const point_3d &p)															//	assignment operator
+point_3d	&point_3d::operator = (const point_3d& p)															//	assignment operator
 {																																								//	begin
 	tuple_3d::operator () (p[X], p[Y], p[Z], p[W]);																//	copy the values
 	return *this;																																	//	return the reference to this
@@ -71,7 +71,7 @@ point_3d	&point_3d::operator = (const point_3d &p)															//	assignment o
 //------------------------------------------------------------------------------
 //	assignment
 //------------------------------------------------------------------------------
-point_3d	&point_3d::operator = (const tuple_3d &t)															//	assignment operator
+point_3d	&point_3d::operator = (const tuple_3d& t)															//	assignment operator
 {																																								//	begin
 	real	w = t[W];																																//	get the homogenous coordinate
 	if (w != R(1.0))																															//	if the homogenous ccordinate needs to be divided
@@ -92,7 +92,7 @@ void	point_3d::operator () (real x, real y, real z, real w)										//	function
 //------------------------------------------------------------------------------
 //	subtraction
 //------------------------------------------------------------------------------
-vector_3d	point_3d::operator - (const point_3d &p) const												//	subtraction operator
+vector_3d	point_3d::operator - (const point_3d& p) const												//	subtraction operator
 {																																								//	begin
 	return vector_3d (	xyz[X] - p[X], 																						//	return a vector_3d, x subtraction
 									xyz[Y] - p[Y], 																								//	y subtraction
@@ -102,7 +102,7 @@ vector_3d	point_3d::operator - (const point_3d &p) const												//	subtracti
 //------------------------------------------------------------------------------
 //	addition of a vector_3d
 //------------------------------------------------------------------------------
-point_3d	point_3d::operator + (const vector_3d &v) const												//	addition of a vector_3d to a point_3d
+point_3d	point_3d::operator + (const vector_3d& v) const												//	addition of a vector_3d to a point_3d
 {																																								//	begin
 	return point_3d (xyz[X] + v[X], 																							//	return a point_3d, x addition
 								xyz[Y] + v[Y], 																									//	y addition

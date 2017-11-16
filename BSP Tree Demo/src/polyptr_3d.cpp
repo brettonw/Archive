@@ -44,7 +44,7 @@ polyptr::polyptr (rcpolygon *poly)																							//	normal constructor
 //------------------------------------------------------------------------------
 //	constructor
 //------------------------------------------------------------------------------
-polyptr::polyptr (const polyptr &poly)																					//	copy constructor
+polyptr::polyptr (const polyptr& poly)																					//	copy constructor
 {																																								//	begin
 	ptr = poly.ptr;																																//	copy the pointer from the polyptr
 	if (ptr)																																			//	if it's valid
@@ -78,7 +78,7 @@ polyptr		&polyptr::operator = (rcpolygon *poly)																//	assignment ope
 //------------------------------------------------------------------------------
 //	assignment
 //------------------------------------------------------------------------------
-polyptr		&polyptr::operator = (const polyptr &poly)														//	assignment operator
+polyptr		&polyptr::operator = (const polyptr& poly)														//	assignment operator
 {																																								//	begin
 	if (poly.ptr)																																	//	if this is a valid rep
 		poly.ptr->ref_count++;																											//	increment its reference count

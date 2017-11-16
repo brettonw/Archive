@@ -96,7 +96,7 @@ matrix_3d	Perspective (real distance)																						//	build a transforma
 //------------------------------------------------------------------------------
 //	Transformation for rotating to an arbitrary normalized basis
 //------------------------------------------------------------------------------
-matrix_3d	VectorMatrix (tuple_3d &n)																						//	build a vector_3d rotation matrix_3d
+matrix_3d	VectorMatrix (tuple_3d& n)																						//	build a vector_3d rotation matrix_3d
 {																																								//	begin
 	vector_3d	t (n),																															//	copy it
 						w (n);
@@ -121,7 +121,7 @@ matrix_3d	VectorMatrix (tuple_3d &n)																						//	build a vector_3d r
 //------------------------------------------------------------------------------
 //	Transformation for rotating to an arbitrary basis at an arbitrary location
 //------------------------------------------------------------------------------
-matrix_3d	ViewMatrix (const vector_3d &u, const vector_3d &v, const vector_3d &n, const point_3d &r)	//	build a viewing matrix_3d from a vector_3d set
+matrix_3d	ViewMatrix (const vector_3d& u, const vector_3d& v, const vector_3d& n, const point_3d& r)	//	build a viewing matrix_3d from a vector_3d set
 {																																								//	begin
 	matrix_3d	m;																																	//	new matrix_3d
 	m (0, 0) = u[X];																															//	assign the first column

@@ -23,7 +23,7 @@ class	ray																																				//	ray class
 				point_3d		origin;																											//	the originating point_3d of the ray
 				vector_3d	direction;																										//	the direction vector_3d of the ray
 	public:																																				//	members available externally
-				ray (const point_3d &origin, const vector_3d &direction);								//	constructor
+				ray (const point_3d& origin, const vector_3d& direction);								//	constructor
 const 	point_3d 	&Origin (void) const;																					//	return a reference to the origin point_3d of the ray
 const 	vector_3d	&Direction (void) const;																			//	return a reference to the direction vector_3d of the ray
 				point_3d	IntersectionPoint (real distance) const;											//	compute the point_3d at which the intersection occurs

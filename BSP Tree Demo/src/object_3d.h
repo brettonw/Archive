@@ -22,7 +22,7 @@ class	object_3d																																		//	object_3d class
 	public:																																				//	members available externally
 				object_3d (void) {}																												//	constructor
 virtual	~object_3d (void);																													//	destructor
-virtual	real		RayIntersection (const ray &r) const = 0;												//	return the distance along the ray at which the intersection occurs
+virtual	real		RayIntersection (const ray& r) const = 0;												//	return the distance along the ray at which the intersection occurs
 };																																							//	end
 
 //------------------------------------------------------------------------------

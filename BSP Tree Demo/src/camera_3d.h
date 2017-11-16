@@ -23,8 +23,8 @@ class	camera																																		//	camera class
 			point_3d	eye;																														//	eye location
 			matrix_3d	viewing, inverse;																								//	the viewing matrix_3d suite
 	public:																																				//	public interface
-			camera (const point_3d &eye, const point_3d &to, real fov);								//	default constructor
-			void			Look (const point_3d &eye, const point_3d &to, real fov);				//	set the camera location and viewing direction
+			camera (const point_3d& eye, const point_3d& to, real fov);								//	default constructor
+			void			Look (const point_3d& eye, const point_3d& to, real fov);				//	set the camera location and viewing direction
 const matrix_3d	&Transform (void) const;																				//	return a reference to the transformation matrix_3d
 const matrix_3d	&Inverse (void) const;																					//	return a reference to the inverse transformation matrix_3d
 const	point_3d	&Eye (void) const;																							//	return a reference to the eye point_3d

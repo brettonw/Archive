@@ -36,7 +36,7 @@ polylist::~polylist (void)																											//	destructor
 //------------------------------------------------------------------------------
 //	add to list
 //------------------------------------------------------------------------------
-void		polylist::AddToList (const polyptr &poly)																//	add a polygon to the list
+void		polylist::AddToList (const polyptr& poly)																//	add a polygon to the list
 {																																								//	begin
 	node	*add = new node;																												//	create a new node
 	add->ptr = poly;																															//	copy the polygon pointer
@@ -49,7 +49,7 @@ void		polylist::AddToList (const polyptr &poly)																//	add a polygon 
 //------------------------------------------------------------------------------
 //	add to list
 //------------------------------------------------------------------------------
-void		polylist::Append (listptr &list)																				//	append the contents of list to this list
+void		polylist::Append (listptr& list)																				//	append the contents of list to this list
 {																																								//	begin
 	while (list->head)																														//	while there are elements in in the appending list
 		AddToList (list->Pop ());																										//	pop them off and add them to this list

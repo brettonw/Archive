@@ -69,8 +69,8 @@ typedef double real;
 #define not     !
 #define xor     ^
 #define and_eq  &=
-#define bit_and &
-#define bitand  &
+#define bit_and & 
+#define bitand  & 
 #define bit_or  |
 #define bitor   |
 #define compl   ~
