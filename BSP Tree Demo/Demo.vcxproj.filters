@@ -28,9 +28,6 @@
     <ClCompile Include="source\cube.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="source\draw.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="source\initapp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -96,9 +93,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="INCLUDE\ARCBALL.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="INCLUDE\BOUND_3D.H">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -115,9 +109,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="INCLUDE\CUBE.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="INCLUDE\DRAW.H">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="INCLUDE\iterator_3d.h">
@@ -187,6 +178,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="INCLUDE\view.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="INCLUDE\arcball.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -37,7 +37,7 @@ class	polylist																																	//	polygon list class
 				void			Append (listptr &list);																				//	append the contents of list to this list
 				polyptr		Pop (void);																										//	pop the head from the list
 				bool			Empty (void) const;																						//	return whether or not the list is empty
-				void			Draw (void) const;																						//	draw the polygons in the list
+				void			draw (void) const;																						//	draw the polygons in the list
 const		bound_3d	&BoundingBox (void) const;																		//	return a reference to the bounding box of the list
 };																																							//	end polygon class definition
 

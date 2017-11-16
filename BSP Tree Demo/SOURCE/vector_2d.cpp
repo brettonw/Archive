@@ -77,7 +77,7 @@ vector_2d	vector_2d::operator - (const vector_2d &v) const											//	subtract
 //------------------------------------------------------------------------------
 real			vector_2d::Norm (void) const																					//	compute the length of the vector_2d
 {
-	return sqrt ((xy[X] * xy[X]) + (xy[Y] * xy[Y]));
+	return sqrtf ((xy[X] * xy[X]) + (xy[Y] * xy[Y]));
 }
 
 //------------------------------------------------------------------------------

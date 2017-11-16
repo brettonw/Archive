@@ -47,7 +47,7 @@ inline	bool	odd (int v)																												//	return whether the number 
 //------------------------------------------------------------------------------
 inline	real	fract (real v)																										//	return the fractional part of v
 {																																								//	begin
-	v = v - floor (v);																														//	get the fractional part
+	v = v - floorf (v);																														//	get the fractional part
 	if (v < R(0.0)) v += R(1.0);																									//	if it is a negative value, add one
 	return v;																																			//	return the result
 }																																								//	end

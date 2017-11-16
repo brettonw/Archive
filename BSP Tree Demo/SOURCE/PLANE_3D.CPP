@@ -105,7 +105,7 @@ void	plane_3d::Invert (void)																										//	invert the values of th
 real		plane_3d::RayIntersection (const ray &r) const													//	return the distance along the ray at which the intersection occurs
 {																																								//	begin
 	real costheta = -(r.Direction () | *this);																		//	compute the cosine of the angle between the ray and the plane_3d normal
-	if (abs (costheta) < EPSILON) return R(-1.0);																	//	return a -1 for plane_3d and ray parallel
+	if (fabs (costheta) < EPSILON) return R(-1.0);																	//	return a -1 for plane_3d and ray parallel
 	return (r.Origin () | *this) / costheta;																			//	compute the distance from the ray origin to the plane_3d, and divide by the cosine 
 }																																								//	end
 

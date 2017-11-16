@@ -68,7 +68,7 @@ typedef	double					real;																										//	common name for floating po
 #define	ACOS	acos																															//	use float version of function for speed
 #define	SIN		sinf																															//	use float version of function for speed
 #define	ASIN	asinf																															//	use float version of function for speed
-#define	TAN		tan																																//	use float version of function for speed
+#define	TAN		tanf																																//	use float version of function for speed
 #define	ATAN	atanf																															//	use float version of function for speed
 #define	ATAN2	atan2f																														//	use float version of function for speed
 #define	SQRT	sqrtf																															//	use float version of function for speed
@@ -90,7 +90,7 @@ typedef	double					real;																										//	common name for floating po
 //------------------------------------------------------------------------------
 //	constants
 //------------------------------------------------------------------------------
-const		real	INFINITY = R(100000.0);																						//	floating point infinity value
+//const		real	INFINITY = R(100000.0);																						//	floating point infinity value
 const		real	EPSILON = R(1.0) / R(100000.0);																		//	floating point epsilon value
 #ifndef	PI
 const		real	PI = R(3.14159265358979323846);																		//	pi

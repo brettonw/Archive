@@ -40,8 +40,8 @@ void	tuple_2d::operator = (const tuple_2d &t)																	//	assignment oper
 //------------------------------------------------------------------------------
 bool	tuple_2d::operator == (const tuple_2d &t) const														//	equality operator
 {																																								//	begin
-	return	bool ((abs (xy[X] - t[X]) < EPSILON) && 															//	compare the x coordinates
-								(abs (xy[Y] - t[Y]) < EPSILON));																//	compare the w coordinates			
+	return	bool ((fabs (xy[X] - t[X]) < EPSILON) && 															//	compare the x coordinates
+								(fabs (xy[Y] - t[Y]) < EPSILON));																//	compare the w coordinates			
 }																																								//	end
 
 //------------------------------------------------------------------------------
@@ -49,8 +49,8 @@ bool	tuple_2d::operator == (const tuple_2d &t) const														//	equality op
 //------------------------------------------------------------------------------
 bool	tuple_2d::operator != (const tuple_2d &t) const														//	inequality operator
 {																																								//	begin
-	return	bool ((abs (xy[X] - t[X]) > EPSILON) || 															//	compare the x coordinates
-								(abs (xy[Y] - t[Y]) > EPSILON));																//	compare the w coordinates			
+	return	bool ((fabs (xy[X] - t[X]) > EPSILON) || 															//	compare the x coordinates
+								(fabs (xy[Y] - t[Y]) > EPSILON));																//	compare the w coordinates			
 }																																								//	end
 
 //------------------------------------------------------------------------------

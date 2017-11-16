@@ -9,6 +9,7 @@
 
 #include "precompile.h"
 #include "listptr_3d.h"
+#include "view.h"
 
 //------------------------------------------------------------------------------
 //	constructor
@@ -82,13 +83,12 @@ bool		polylist::Empty (void) const																						//	return whether or not
 //------------------------------------------------------------------------------
 //	draw all the polygons in the list
 //------------------------------------------------------------------------------
-void		polylist::Draw (void) const																							//	draw the polygons in the list
+void		polylist::draw (void) const																							//	draw the polygons in the list
 {																																								//	begin
 	node	*current = head;																												//	start at the top
 	while (current)																																//	while there are more items in the list
 	{																																							//	begin
-		extern	void	DrawPolygon (polyptr);
-		DrawPolygon (current->ptr);																									//	draw the polygon
+		gView->drawPolygon (current->ptr);																									//	draw the polygon
 		current = current->next;																										//	advance to the next list entry
 	}																																							//	end
 }																																								//	end

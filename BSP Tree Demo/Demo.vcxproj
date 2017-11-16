@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -13,16 +13,17 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{EC10EAB1-9841-40E9-A717-82751B7888E2}</ProjectGuid>
     <RootNamespace>Demo</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -139,7 +140,6 @@
     <ClCompile Include="source\bsptree_3d.cpp" />
     <ClCompile Include="source\camera_3d.cpp" />
     <ClCompile Include="source\cube.cpp" />
-    <ClCompile Include="source\draw.cpp" />
     <ClCompile Include="source\initapp.cpp" />
     <ClCompile Include="source\iterator_3d.cpp" />
     <ClCompile Include="source\listptr_3d.cpp" />
@@ -163,14 +163,13 @@
     <ClCompile Include="source\view.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="INCLUDE\ARCBALL.H" />
+    <ClInclude Include="INCLUDE\arcball.h" />
     <ClInclude Include="INCLUDE\BOUND_3D.H" />
     <ClInclude Include="INCLUDE\bspnode_3d.h" />
     <ClInclude Include="INCLUDE\bsptree_3d.h" />
     <ClInclude Include="INCLUDE\camera_3d.h" />
     <ClInclude Include="INCLUDE\COORD.H" />
     <ClInclude Include="INCLUDE\CUBE.H" />
-    <ClInclude Include="INCLUDE\DRAW.H" />
     <ClInclude Include="INCLUDE\iterator_3d.h" />
     <ClInclude Include="INCLUDE\listptr_3d.h" />
     <ClInclude Include="INCLUDE\matrix_3d.h" />
