@@ -39,7 +39,7 @@ DrawArc (HDC dc, const Vector2& A, const Vector2& B)
     float           halfLength = length / 2;
     Vector2			center = A + (halfLength * delta) + (-halfLength * ortho);
     float           radius = sqrtf (2 * halfLength * halfLength) ;
-    float           angle = atan2 (-delta.y, -delta.x) + (float (M_PI) / 4) + (float (M_PI) / 32);
+    float           angle = atan2f (-delta.y, -delta.x) + (float (M_PI) / 4) + (float (M_PI) / 32);
     float           deltaAngle = ((float (M_PI) / 2) - (float (M_PI) / 16)) / 8;
     Vector2			first = center + (radius * Vector2 (cosf (angle), sinf (angle)));
     POINT           ptA = MapPoint (first);
