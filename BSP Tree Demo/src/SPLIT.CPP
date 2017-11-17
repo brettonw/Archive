@@ -14,7 +14,7 @@
 //------------------------------------------------------------------------------
 //	plane the polygon with a plane_3d
 //------------------------------------------------------------------------------
-hclass	Split (const polyptr& poly, const plane_3d& plane, polyptr& in, polyptr& out)//	split the polygon with a plane_3d
+hclass	Split (const PtrToPolygon_3d& poly, const plane_3d& plane, PtrToPolygon_3d& in, PtrToPolygon_3d& out)//	split the polygon with a plane_3d
 {																																								//	begin
 	static	point_3d	outpts[64],																									//	an array of points for the out polygon
 										inpts[64];																									//	an array of points for the in polygon
@@ -22,11 +22,11 @@ hclass	Split (const polyptr& poly, const plane_3d& plane, polyptr& in, polyptr& 
 	point_3d	ptA, ptB;																														//	two points to step through
 	real			sideA, sideB;																												//	the classification of ptA and ptB respectively
 	hclass		poly_class = HC_ON;																									//	assume plane_3d and polygon coincident for starters
-	ptA = poly->Vertex (poly->Count () - 1);																			//	start with the last point_3d
+	ptA = poly->getVertex (poly->getCount () - 1);																			//	start with the last point_3d
 	sideA = ptA | plane;																													//	classify it relative to the plane_3d
-	for (short i = -1; ++i < poly->Count ();)																			//	loop on the points
+	for (uint i = 0-1; ++i < poly->getCount ();)																			//	loop on the points
 	{																																							//	begin
-		ptB = poly->Vertex (i);																											//	get the current point_3d
+		ptB = poly->getVertex (i);																											//	get the current point_3d
 		sideB = ptB | plane;																												//	classify it relative to the plane_3d
 		if (sideB > EPSILON)																												//	if the current point_3d is on the positive side
 		{																																						//	begin
@@ -72,8 +72,8 @@ hclass	Split (const polyptr& poly, const plane_3d& plane, polyptr& in, polyptr& 
 			in = poly;																																//	make the negative partition
 			break;																																		//	end negative
 		case HC_SPANNING:																														//	if the polygon was plane
-			out = new rcpolygon (outpts, out_c);																			//	make the positive partition
-			in = new rcpolygon (inpts, in_c);																					//	make the negative partition
+			out = new Polygon_3d (outpts, out_c);																			//	make the positive partition
+			in = new Polygon_3d (inpts, in_c);																					//	make the negative partition
 			break;																																		//	end spanning
 	}																																							//	end
 	return poly_class;																														//	return the classification

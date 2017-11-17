@@ -8,7 +8,9 @@
 //
 //------------------------------------------------------------------------------
 
-#include "polyptr_3d.h"
+#ifndef     _POLYGON_
+#include	"polygon_3d.h"
+#endif  //  _POLYGON_
 
 #ifndef	SPLIT
 #define	SPLIT
@@ -21,7 +23,7 @@ enum	hclass {HC_IN = -1, HC_ON = 0, HC_OUT = 1, HC_SPANNING = 2};							//	class
 //------------------------------------------------------------------------------
 //	functions
 //------------------------------------------------------------------------------
-hclass	Split (const polyptr&, const plane_3d&, polyptr&, polyptr&);						//	split the polygon with a plane_3d
+hclass	Split (const PtrToPolygon_3d&, const plane_3d&, PtrToPolygon_3d&, PtrToPolygon_3d&);						//	split the polygon with a plane_3d
 
 //------------------------------------------------------------------------------
 

@@ -1,7 +1,6 @@
 #include	"arcball.h"
-#include	"matrix_3d.h"
-#include	"polyptr_3d.h"
 #include	"camera_3d.h"
+#include	"bsptree_3d.h"
 
 #ifndef VIEW
 #define VIEW
@@ -11,7 +10,7 @@
 
 class View
 {
-private:
+    protected:
 	// map screen coordinates (dc) to virtual device coordinates (vdc) and back
 	point_2d dcToVdc(const POINT& p) const;
 	POINT vdcToDc(const point_2d& p) const;
@@ -46,11 +45,11 @@ public:
 	void drawLineToPt(const point_2d& pt, COLORREF strokeColor) const;
 	void drawCircle(const point_2d& a, const point_2d& b, COLORREF strokeColor, COLORREF fillColor) const;
 	void drawCrossHair(const point_2d& p, COLORREF strokeColor) const;
-    void drawPolygon (polyptr poly, COLORREF strokeColor, COLORREF fillColor);
-    void drawPolygon (polyptr poly);
-    void drawScene(void);
-	void handleClick(POINT where);
-	void handleDrag(POINT where);
+    void drawPolygon (const PtrToPolygon_3d& poly, COLORREF strokeColor, COLORREF fillColor);
+    void drawPolygon (const PtrToPolygon_3d& poly);
+    void drawScene(BspTree tree);
+	void handleClick(POINT where, BspTree tree);
+	void handleDrag(POINT where, BspTree tree);
 
     void eraseOffscreen ();
     void swapOffscreen ();

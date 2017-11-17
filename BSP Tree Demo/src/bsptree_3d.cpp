@@ -1,52 +1,52 @@
 #include "precompile.h"
 #include "bspnode_3d.h"
 
-BspTree* gWorld;
-
-void BspTree::insert (listptr list, hclass keep, hclass cur) {
-    if (list->Empty ()) return;
-    if (ptr) {
-        ptr->insert (list, keep);
+void BspTree::insert (PtrToPolygonList_3d& list, hclass keep, hclass cur) {
+    if (list->empty ()) return;
+    if (ptrTo) {
+        ptrTo->insert (list, keep);
     } else if ((cur == keep) or (keep == HC_SPANNING)) {
-        ptr = new BspNode (list->Pop ());
-        if (!list->Empty ()) {
-            ptr->insert (list, HC_SPANNING);
+        setPtr (new BspNode (list->pop ()));
+        // add ref
+
+        if (!list->empty ()) {
+            ptrTo->insert (list, HC_SPANNING);
         }
     }
 }
 
-void BspTree::push (polyptr poly, listptr result, hclass keep, hclass cur) {
-    if (ptr) {
-        ptr->push (poly, result, keep);
+void BspTree::push (const PtrToPolygon_3d& poly, PtrToPolygonList_3d& result, hclass keep, hclass cur) {
+    if (ptrTo) {
+        ptrTo->push (poly, result, keep);
     } else if (cur == keep) {
-        result->AddToList (poly);
+        result->addToList (poly);
     }
 }
 
-void BspTree::push (listptr list, listptr result, hclass keep, hclass cur) {
-    if (list->Empty ()) return;
-    if (ptr) {
-        ptr->push (list, result, keep);
+void BspTree::push (PtrToPolygonList_3d& list, PtrToPolygonList_3d& result, hclass keep, hclass cur) {
+    if (list->empty ()) return;
+    if (ptrTo) {
+        ptrTo->push (list, result, keep);
     } else if (cur == keep) {
-        result->Append (list);
+        result->append (list);
     }
 }
 
 void BspTree::reduce (void) {
-    if (ptr) {
-        ptr->reduce ();
+    if (ptrTo) {
+        ptrTo->reduce ();
     }
 }
 
-void BspTree::draw (const point_3d &eye) const {
-    if (ptr) {
-        ptr->draw (eye);
+void BspTree::draw (const point_3d& eye) const {
+    if (ptrTo) {
+        ptrTo->draw (eye);
     }
 }
 
-bool BspTree::rayIntersection (const ray &r, polyptr &poly_hit, point_3d &ipt) const {
-    if (ptr) {
-        return ptr->rayIntersection (r, poly_hit, ipt);
+bool BspTree::rayIntersection (const ray & r, PtrToPolygon_3d& poly_hit, point_3d& ipt) const {
+    if (ptrTo) {
+        return ptrTo->rayIntersection (r, poly_hit, ipt);
     }
     return FALSE;
 }

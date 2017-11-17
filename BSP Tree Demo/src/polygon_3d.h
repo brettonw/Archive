@@ -1,58 +1,43 @@
-//------------------------------------------------------------------------------
-//	File:					polygon.h
-//	Date:					04/07/97
-//	Author:				Bretton Wade
-//
-//	Description:	this file contains the class definition for a polygon.
-//
-//------------------------------------------------------------------------------
+#ifndef     _PTR_TO_H_
+#include    "ptr_to.h"
+#endif  //  _PTR_TO_H_
 
 #include "plane_3d.h"
 
-#ifndef	POLYGON
-#define	POLYGON
+#ifndef     _POLYGON_
+#define     _POLYGON_
 
-//------------------------------------------------------------------------------
-//	classes
-//------------------------------------------------------------------------------
-class	polygon : public object_3d																								//	3 dimensional polygon class
-{																																								//	begin polygon class definition
-	private:																																			//	members internal to this class only
-	protected:																																		//	members internal to this class hierarchy
-				plane_3d	plane;																												//	plane_3d equation for the polygon
-				uchar			count;																												//	number of points in the polygon
-				point_3d	*points;																											//	the array of points that compose the polygon
-	public:																																				//	members available externally
-				polygon (point_3d *buffer, uchar count, va_list pts);										//	normal constructor
-				polygon (point_3d *buffer, uchar count);																//	normal constructor
-virtual	~polygon (void);																												//	destructor
-				uchar			Count (void) const;																						//	return the number of points in the polygon
-const		point_3d	&Vertex (int i) const;																				//	return the ith point_3d of the polygon
-const		plane_3d	&Plane (void) const;																					//	return a reference to the plane_3d of the polygon
-				vector_3d	Normal (void) const;																					//	compute the plane_3d normal vector_3d Newell's method
-				bool			Contains (const point_3d& pt) const;													//	test the point_3d to see if it is inside the polygon (crossings method)
-				void			Invert (void);																								//	completely reverse the orientation of the polygon
-virtual	real			RayIntersection (const ray& r) const;													//	return the distance along the ray at which the intersection occurs
-};																																							//	end polygon class definition
+MAKE_PTR_TO (Polygon_3d);
 
-//------------------------------------------------------------------------------
-//	inlines
-//------------------------------------------------------------------------------
-inline	uchar	polygon::Count (void) const																				//	return the number of points in the polygon
-{																																								//	begin
-	return count;																																	//	return the count
-}																																								//	end
+class	Polygon_3d : public Object_3d {
+    protected:
+    plane_3d plane;
+    uint count;
+    point_3d* points;
 
-inline	const	point_3d	&polygon::Vertex (int i) const													//	return the ith point_3d of the polygon
-{																																								//	begin
-	return points[i];																															//	return the point_3d
-}																																								//	end
+    public:
+    Polygon_3d (point_3d* buffer, uint count, int a, ...);
+    Polygon_3d (point_3d* buffer, uint count);
+    virtual	~Polygon_3d (void);
+    uint getCount (void) const;
+    const point_3d& getVertex (int i) const;
+    const plane_3d& getPlane (void) const;
+    vector_3d normal (void) const;
+    bool contains (const point_3d& pt) const;
+    void invert (void);
+    virtual	real rayIntersection (const ray& r) const;
+};
 
-inline	const	plane_3d	&polygon::Plane (void) const														//	return a reference to the plane_3d of the polygon
-{																																								//	begin
-	return plane;																																	//	return the plane_3d associated with the polygon
-}																																								//	end
+inline	uint	Polygon_3d::getCount (void) const {
+    return count;
+}
 
-//------------------------------------------------------------------------------
+inline	const	point_3d& Polygon_3d::getVertex (int i) const {
+    return points[i];
+}
 
-#endif	//POLYGON
+inline	const	plane_3d& Polygon_3d::getPlane (void) const {
+    return plane;
+}
+
+#endif  //  _POLYGON_

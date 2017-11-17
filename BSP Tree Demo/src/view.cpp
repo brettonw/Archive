@@ -115,17 +115,17 @@ void View::drawCrossHair (const point_2d& vp, COLORREF strokeColor) const {
     DeleteObject (pen);																														//	free up the pen
 }
 
-void View::drawPolygon (polyptr poly, COLORREF strokeColor, COLORREF fillColor) {
+void View::drawPolygon (const PtrToPolygon_3d& poly, COLORREF strokeColor, COLORREF fillColor) {
     HPEN pen = CreatePen (PS_SOLID, 0, strokeColor);																		//	make a pen for the crosshair
     HGDIOBJ oldpen = SelectObject (offscreenDC, pen);																							//	select the pen
 
     HBRUSH brush = CreateSolidBrush (fillColor);
     HGDIOBJ oldbrush = SelectObject (offscreenDC, brush);
-    for (short i = 0; i < poly->Count (); i++) {
-        point_3d pt = poly->Vertex (i) * viewing;
+    for (uint i = 0; i < poly->getCount (); i++) {
+        point_3d pt = poly->getVertex (i) * viewing;
         pts[i] = vdcToDc (point_2d (pt[X], pt[Y]));
     }
-    Polygon (offscreenDC, pts, poly->Count ());
+    Polygon (offscreenDC, pts, poly->getCount ());
 
     SelectObject (offscreenDC, oldbrush);
     DeleteObject (brush);
@@ -134,10 +134,10 @@ void View::drawPolygon (polyptr poly, COLORREF strokeColor, COLORREF fillColor) 
     DeleteObject (pen);																														//	free up the pen
 }
 
-void View::drawPolygon (polyptr poly) {
-    if ((eye | poly->Plane ()) > R (0.0)) {
+void View::drawPolygon (const PtrToPolygon_3d& poly) {
+    if ((eye | poly->getPlane ()) > R (0.0)) {
         static vector_3d light = vector_3d (R (4.0), R (8.0), R (6.0)).Normalize ();
-        real shade = (poly->Plane () | light) * R (0.8) + R (0.2);
+        real shade = (poly->getPlane () | light) * R (0.8) + R (0.2);
         if (shade < R (0.3)) shade = R (0.3);
         if (shade > R (0.9)) shade = R (0.9);
         shade *= R (255.0);
@@ -146,29 +146,29 @@ void View::drawPolygon (polyptr poly) {
     }
 }
 
-void View::drawScene (void) {
+void View::drawScene (BspTree tree) {
     viewing = transformation * cam.Transform ();
     eye = cam.Eye () * inverse;
-    gWorld->draw (eye);
+    tree.draw (eye);
 
     // queue up the offscreen swap
     InvalidateRect (window, 0, false);
 }
 
-void View::handleClick (POINT where) {
+void View::handleClick (POINT where, BspTree tree) {
     sum = transformation;
     gui->click (dcToVdc (where));
     gui->drag (dcToVdc (where));
     gui->drawBackground ();
-    drawScene ();
+    drawScene (tree);
     gui->drawForeground ();
 }
 
-void View::handleDrag (POINT where) {
+void View::handleDrag (POINT where, BspTree tree) {
     transformation = sum * gui->drag (dcToVdc (where));
     inverse = transformation.Inverse ();
     gui->drawBackground ();
-    drawScene ();
+    drawScene (tree);
     gui->drawForeground ();
 }
 

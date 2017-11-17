@@ -30,12 +30,6 @@
     <ClCompile Include="src\initapp.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\iterator_3d.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\listptr_3d.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="src\matrix_3d.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -54,19 +48,10 @@
     <ClCompile Include="src\polygon_3d.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\polylist_3d.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\polyptr_3d.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="src\quaternion_3d.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="src\ray_3d.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\rcpolygon_3d.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="src\split.cpp">
@@ -88,6 +73,9 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="src\view.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\polygon_list_3d.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
@@ -116,12 +104,6 @@
     <ClInclude Include="src\cube.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\iterator_3d.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\listptr_3d.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="src\matrix_3d.h">
       <Filter>src</Filter>
     </ClInclude>
@@ -140,12 +122,6 @@
     <ClInclude Include="src\polygon_3d.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\polylist_3d.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\polyptr_3d.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="src\precompile.h">
       <Filter>src</Filter>
     </ClInclude>
@@ -153,9 +129,6 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\ray_3d.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\rcpolygon_3d.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\split.h">
@@ -183,6 +156,9 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\ptr_to.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\polygon_list_3d.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

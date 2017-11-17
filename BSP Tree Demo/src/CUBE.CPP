@@ -13,7 +13,7 @@
 //------------------------------------------------------------------------------
 //	generate a cube
 //------------------------------------------------------------------------------
-listptr	Cube (matrix_3d transformation)																					//	compute a cube given a transformation
+PtrToPolygonList_3d	Cube (matrix_3d transformation)																					//	compute a cube given a transformation
 {																																								//	begin
 	point_3d		cube_points[8];																										//	eight vertices
 	//	compute the vertices
@@ -26,13 +26,13 @@ listptr	Cube (matrix_3d transformation)																					//	compute a cube gi
 	cube_points[6] = point_3d (R(-1.0), R(-1.0), R(-1.0)) * transformation;
 	cube_points[7] = point_3d (R( 1.0), R(-1.0), R(-1.0)) * transformation;
 	//	now compute the polygons
-	listptr	cube_polys;
-	cube_polys->AddToList (polyptr (cube_points, 4, 0, 1, 2, 3));
-	cube_polys->AddToList (polyptr (cube_points, 4, 7, 6, 5, 4));
-	cube_polys->AddToList (polyptr (cube_points, 4, 0, 3, 7, 4));
-	cube_polys->AddToList (polyptr (cube_points, 4, 0, 4, 5, 1));
-	cube_polys->AddToList (polyptr (cube_points, 4, 5, 6, 2, 1));
-	cube_polys->AddToList (polyptr (cube_points, 4, 3, 2, 6, 7));
+    PtrToPolygonList_3d	cube_polys = new PolygonList_3d ();
+	cube_polys->addToList (new Polygon_3d (cube_points, 4, 0, 1, 2, 3));
+	cube_polys->addToList (new Polygon_3d (cube_points, 4, 7, 6, 5, 4));
+	cube_polys->addToList (new Polygon_3d (cube_points, 4, 0, 3, 7, 4));
+	cube_polys->addToList (new Polygon_3d (cube_points, 4, 0, 4, 5, 1));
+	cube_polys->addToList (new Polygon_3d (cube_points, 4, 5, 6, 2, 1));
+	cube_polys->addToList (new Polygon_3d (cube_points, 4, 3, 2, 6, 7));
 	//	return the result
 	return cube_polys;
 }																																								//	end

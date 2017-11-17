@@ -12,117 +12,127 @@
 
 inline
 void    addRefToPtr (CountedObject* ptr) {
-    if (ptr) ptr->addRef ();
+    if (ptr) {
+        ptr->addRef ();
+    }
 }
 
 inline
 void    removeRefFromPtr (CountedObject* ptr) {
-    if (ptr and (ptr->removeRef () == 0))
+    if (ptr and (ptr->removeRef () == 0)) {
         delete ptr;
+    }
 }
 
 template <class aType>
 /* void */
 PtrTo<aType>::PtrTo (void) :
-    ptr (0) {}
+    ptrTo (0) {}
 
 template <class aType>
 /* void */
 PtrTo<aType>::PtrTo (aType* ptr) :
-    ptr (ptr) {
-    addRefToPtr (ptr);
+    ptrTo (ptr) {
+    addRefToPtr (ptrTo);
 }
 
 template <class aType>
 /* void */
 PtrTo<aType>::PtrTo (const PtrTo<aType>& ptr) :
-    ptr (ptr.ptr) {
-    addRefToPtr (ptr);
+    ptrTo (ptr.ptrTo) {
+    addRefToPtr (reinterpret_cast<CountedObject*> (ptrTo));
 }
 
 template <class aType>
 /* void */
 PtrTo<aType>::~PtrTo (void) {
-    removeRefFromPtr (reinterpret_cast<CountedObject*> (ptr));
+    removeRefFromPtr (reinterpret_cast<CountedObject*> (ptrTo));
+}
+
+template <class aType>
+aType*
+PtrTo<aType>::setPtr (aType* ptr) {
+    ptrTo = ptr;
+    addRefToPtr (ptrTo);
+    return ptrTo;
 }
 
 template <class aType>
 const aType*
 PtrTo<aType>::getPtr (void) const {
-    return ptr;
+    return ptrTo;
 }
 
 template <class aType>
 const aType&
 PtrTo<aType>::operator * (void) const {
-    return *ptr;
+    return *ptrTo;
 }
 
 template <class aType>
 const aType*
 PtrTo<aType>::operator -> (void) const {
-    return ptr;
+    return ptrTo;
 }
 
 template <class aType>
 aType*
 PtrTo<aType>::getPtr (void) {
-    return ptr;
+    return ptrTo;
 }
 
 template <class aType>
 aType&
 PtrTo<aType>::operator * (void) {
-    return *ptr;
+    return *ptrTo;
 }
 
 template <class aType>
 aType*
 PtrTo<aType>::operator -> (void) {
-    //Assert (m_ptr); 
-    return ptr;
+    return ptrTo;
 }
 
 template <class aType>
 /* void* */
 PtrTo<aType>::operator const void* (void) const {
-    return ptr;
+    return ptrTo;
 }
 
 template <class aType>
 PtrTo<aType>&
 PtrTo<aType>::operator = (aType* ptr) {
     addRefToPtr (ptr);
-    removeRefFromPtr (ptr);
-    this.ptr = ptr;
+    removeRefFromPtr (ptrTo);
+    ptrTo = ptr;
     return *this;
 }
 
 template <class aType>
 PtrTo<aType>&
 PtrTo<aType>::operator = (const PtrTo<aType>& ptr) {
-    addRefToPtr (ptr.ptr);
-    removeRefFromPtr (ptr);
-    ptr = ptr.ptr;
+    addRefToPtr (ptr.ptrTo);
+    removeRefFromPtr (ptrTo);
+    ptrTo = ptr.ptrTo;
     return *this;
 }
 
 template <class aType>
 bool
 PtrTo<aType>::operator == (const PtrTo<aType>& ptr) {
-    return ptr == ptr.ptr;
+    return ptrTo == ptr.ptrTo;
 }
 
 template <class aType>
 bool
 PtrTo<aType>::operator != (const PtrTo<aType>& ptr) {
-    return ptr != ptr.ptr;
+    return ptrTo != ptr.ptrTo;
 }
 
 template <class aType>
 bool
 PtrTo<aType>::isUnique (void) const {
-    return ptr->getCount () == 1;
+    return ptrTo->getCount () == 1;
 }
 
 template <class aType>
@@ -131,8 +141,8 @@ PtrTo<aType>::makeUnique (void) {
     if (not isUnique ()) {
         aType* ptr = NewCall aType (*m_ptr);
         addRefToPtr (ptr);
-        removeRefFromPtr (ptr);
-        this.ptr = ptr;
+        removeRefFromPtr (ptrTo);
+        ptrTo = ptr;
     }
 }
 

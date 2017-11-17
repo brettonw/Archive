@@ -18,6 +18,7 @@ class   PtrTo {
     PtrTo (const PtrTo<aType>& ptr);
     virtual ~PtrTo (void);
 
+    aType* setPtr (aType* ptr);
     const aType* getPtr (void) const;
     const aType& operator * (void) const;
     const aType* operator -> (void) const;
@@ -38,7 +39,7 @@ class   PtrTo {
     void makeUnique (void);
 
     protected:
-    aType* ptr;
+    aType* ptrTo;
 };
 
 #define MAKE_PTR_TO(aType)                                                      \
