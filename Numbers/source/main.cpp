@@ -9,7 +9,7 @@
 
 #include    "integer template.h"
 #include    "timer.h"
-#include <iostream>
+#include    <iostream>
 
 //------------------------------------------------------------------------------
 MAKE_INTEGER_TYPE (2048, 10);
@@ -125,7 +125,7 @@ void	validate (void)
 				std::cout << "Failure: " << A << " " << char (op) << " " << B << " = " << C << ", not " << D << '\n';
 				std::cout << "   [RETURN] to continue\n";
 				char	buffer[10];
-				gets (buffer);
+				//gets (buffer);
 			}
 			else
 				std::cout << "OK: " << A << " " << char (op) << " " << B << " = " << D << '\n';
