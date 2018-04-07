@@ -4,3 +4,4 @@ Release
 *.vcxproj.user
 .svn
 obj
+.DS_Store
