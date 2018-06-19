@@ -604,7 +604,7 @@ TextWindow::OnCharDown
 
 			// check to see that there is no whitespace at the beginning
 			// of the next line already
-			uInt1   nextChar = myText.GetChar (mySelectionStartOffset);
+			uInt1   nextChar = (mySelectionStartOffset < myText.Length ()) ? myText.GetChar (mySelectionStartOffset) : 0;
 			if ((nextChar != '\t') and (nextChar != ' '))
 			{
 			    // get the line we are currently on

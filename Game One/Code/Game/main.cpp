@@ -110,3 +110,4 @@ WinMain (HINSTANCE instance, HINSTANCE prevInstance, LPSTR cmdLine, sInt cmdShow
 }
 
 //-----------------------------------------------------------------------------
+int (WINAPIV * __vsnprintf)(char *, size_t, const char*, va_list) = _vsnprintf;

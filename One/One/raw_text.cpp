@@ -163,6 +163,7 @@ RawText::GetChar
 	uInt				which
 ) const
 {
+
 	assert (which < myLength);
 	return myText[which];
 }

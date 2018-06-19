@@ -3,5 +3,9 @@ Release
 .vs
 *.vcxproj.user
 .svn
-obj
+*.obj
 .DS_Store
+*.log
+*.pch
+*.ncb
+*.sdf
